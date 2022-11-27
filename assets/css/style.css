@@ -16,6 +16,7 @@ header {
   align-items: center;
   display: flex;
   justify-content: center;
+  min-height: 10vh;
 }
 
 header a {
@@ -45,7 +46,7 @@ div.background {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
+  min-height: 90vh;
 }
 
 div#home-container {
@@ -58,4 +59,13 @@ div#home-container {
   margin: 1rem;
   padding: 1rem;
   width: 90%;
+}
+
+/* Footer */
+
+footer {
+  background-color: black;
+  color: white;
+  font-family: Jost, sans-serif;
+  padding: 1rem;
 }
