@@ -33,3 +33,29 @@ header h1 {
   font-weight: bold;
   padding-left: 0.1rem;
 }
+
+/* Main Content */
+
+p {
+  font-family: Georgia, serif;
+}
+
+div.background {
+  background-color: #c0c0c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+div#home-container {
+  background-color: white;
+  border: 1rem solid #976c42;
+  border-radius: 25px 0 25px 0;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1rem;
+  width: 90%;
+}
