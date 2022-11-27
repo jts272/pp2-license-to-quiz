@@ -1,6 +1,14 @@
-/* Google Fonts import rule */
+/* Google Fonts Import */
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+/* Box Model Control */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* Header */
 
