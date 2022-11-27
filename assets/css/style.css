@@ -1,6 +1,22 @@
+/* Google Fonts import rule */
+
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
 
-h1 {
+/* Header */
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+header > img {
+  height: 4rem;
+}
+
+header > h1 {
   font-family: Jost, sans-serif;
+  font-style: italic;
   font-weight: bold;
+  padding-left: 0.1rem;
 }
