@@ -54,18 +54,6 @@ div.background {
   padding: 2rem 0;
 }
 
-/* div#home-container {
-  background-color: white;
-  border: 1rem solid #976c42;
-  border-radius: 25px 0 25px 0;
-  display: flex;
-  flex-flow: column;
-  flex-wrap: wrap;
-  margin: 1rem;
-  padding: 1rem;
-  width: 90%;
-} */
-
 .home-container {
   background-color: white;
   border: 1rem solid #976c42;
@@ -102,7 +90,7 @@ footer {
 }
 
 div.socials * {
-  font-size: 1.5rem;
   color: inherit;
+  font-size: 2rem;
   text-decoration: none;
 }
