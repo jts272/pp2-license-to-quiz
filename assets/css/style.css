@@ -10,6 +10,19 @@
   padding: 0;
 }
 
+/* Font Properties */
+
+h1,
+h2 {
+  font-family: Jost, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+p {
+  font-family: Georgia, serif;
+}
+
 /* Header */
 
 header {
@@ -26,21 +39,11 @@ header a {
 
 header img {
   height: 4rem;
+  margin-right: 2px;
   width: 4rem;
 }
 
-header h1 {
-  font-family: Jost, sans-serif;
-  font-style: italic;
-  font-weight: bold;
-  padding-left: 0.1rem;
-}
-
 /* Main Content */
-
-p {
-  font-family: Georgia, serif;
-}
 
 div.background {
   background-color: #c0c0c0;
@@ -48,6 +51,7 @@ div.background {
   align-items: center;
   justify-content: center;
   min-height: 90vh;
+  padding: 2rem 0;
 }
 
 /* div#home-container {
@@ -68,9 +72,9 @@ div.background {
   border-radius: 25px 0 25px 0;
   display: grid;
   grid-template-rows: repeat(4 1fr);
-  min-width: 80%;
-  min-height: 60vh;
-  padding: 2rem;
+  max-width: 80%;
+  max-height: 80%;
+  padding: 1rem;
   row-gap: 1rem;
 }
 
