@@ -12,14 +12,14 @@
 
 /* Font Properties */
 
-h1,
-h2 {
+h1 {
   font-family: Jost, sans-serif;
   font-style: italic;
   font-weight: bold;
 }
 
-p {
+p,
+em {
   font-family: Georgia, serif;
 }
 
@@ -62,8 +62,8 @@ div.background {
   grid-template-rows: repeat(4 1fr);
   max-width: 80%;
   max-height: 80%;
-  padding: 1rem;
-  row-gap: 1rem;
+  padding: 1.5rem;
+  row-gap: 1.5rem;
 }
 
 .home-container button {
