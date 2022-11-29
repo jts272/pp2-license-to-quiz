@@ -1,31 +1,43 @@
+<!-- Comments provided above relevant code sections. Included information on each element's purpose and function -->
+
+<!-- Beginning of document. Boilerplate created with emmet in VS Code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Assign description and keywords for SEO -->
   <meta name="description" content="An interactive online quiz based on the world of James Bond 007">
   <meta name="keywords" content="james, bond, 007, quiz, test, trivia, knowlege, game, lore, secret, agent, mi6">
+  <!-- Link Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Link and provide relative path for Favicon to ensure proper operation -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Preconnect Google Fonts and Font Awesome for SEO -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin="anonymous">
+  <!-- Title relative to current page -->
   <title>License to Quiz | Home</title>
 </head>
 <body>
+  <!-- Header includes icon and title which serve as links to homepage. ARIA label included for image icon for accessibility -->
   <header>
     <a href="index.html" aria-label="Link to the homepage"><img src="assets/images/logo-007.png" alt="007 logo"></a>
     <a href="index.html"><h1>License to Quiz</h1></a>
   </header>
+  <!-- Modal to display how to play the game. Dialog element compatible with modern browsers and is accessibility-aware out-of-the-box. Can natively be closed with 'Esc' key or designated close button -->
   <dialog class="howto-modal">
     <h2>How to Play</h2>
     <p>Your mission is a multiple choice quiz. You will be given a question with 3 possible answers. Select the correct answer and move on to the next one.</p>
-    <p>You have a choice of difficulties. The easier the mission, the fewer then questions. We'll also provide you with more support.</p>
+    <p>You have a choice of difficulties. The easier the mission, the fewer the questions. We'll also provide you with more support.</p>
     <p>Q Branch has developed a device to make things easier for you. Select the 50/50 to rule out one wrong answer. Don't count on this on harder missions though...</p>
     <p>Once you've reached the end, submit your name to the leaderboards or try a harder mission. Have you got all that, Agent?</p>
     <button class="close-howto-modal">Close</button>
   </dialog>
+  <!-- Background on which the page content is displayed -->
   <div class="background">
+    <!-- Container for homepage content. Contains introductory text and buttons to relevant links around the site -->
     <div class="home-container">
       <em>Now pay attention, Agent!</em>
       <p>We are testing your knowledge of all things 007. Select the 'How to Play' button below for the rules of engagement. Press the 'Select Mission' button to choose the difficulty that best suits you. Finally, you can select the 'High Scores' button to see how you stack up with the rest of MI6.</p>
@@ -34,11 +46,15 @@
       <button>High Scores</button>
     </div>
   </div>
+  <!-- Footer includes copyright information for the ip and links to developer's pages. Outgoing links open in a new tab. ARIA labels provided for Font Awesome icons -->
   <footer>
     <sub> 007, James Bond and related logos are trademarks of Danjaq, LLC. All rights reserved. This application is presented for educational purposes only.</sub>
     <div class="socials"><a href="https://github.com/jts272/pp2-license-to-quiz" target="_blank" aria-label="Link to this website's GitHub repository (new tab)"><i class="fa-brands fa-github"></a></i> <a href="https://www.linkedin.com/in/joseph-smith-64a889247/" target="_blank" aria-label="Link to the developer's LinkedIn page (new tab)"><i class="fa-brands fa-linkedin"></i></a></div>
   </footer>
-  <script src="assets/js/script.js"></script>
+  <!-- Link to script required to display Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/2c19ba1d16.js" crossorigin="anonymous"></script>
+  <!-- Links to JavaScript file for site interactivity. Last child of body for optimal performance -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
+<!-- End of document -->
