@@ -33,6 +33,13 @@ em {
   font-family: Georgia, serif;
 }
 
+/* Utility Classes */
+
+.link-default-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Header */
 
 header {
