@@ -6,7 +6,7 @@
 
 const howto = document.querySelector(".howto-modal");
 const openHowto = document.querySelector("#open-howto");
-const closeHowto = document.querySelector(".close-howto-modal");
+const closeHowto = document.querySelector("#close-howto");
 console.log(howto, openHowto, closeHowto);
 
 openHowto.addEventListener("click", () => {

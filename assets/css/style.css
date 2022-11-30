@@ -92,11 +92,11 @@ header img {
   row-gap: 1.5rem;
 }
 
-.home-container button,
-.difficulty-container button {
+.button {
   border: 1px solid #976c42;
   border-radius: 25px;
   color: black;
+  cursor: pointer;
   font-family: Jost, sans-serif;
   font-size: 1.25rem;
   padding: 0.5rem;
@@ -120,15 +120,6 @@ dialog::backdrop {
 
 .howto-modal > * {
   margin: 1rem;
-}
-
-.howto-modal button {
-  border: 1px solid #976c42;
-  border-radius: 25px;
-  color: black;
-  font-family: Jost, sans-serif;
-  font-size: 1.25rem;
-  padding: 0.5rem;
 }
 
 /* Game Page */
