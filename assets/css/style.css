@@ -92,17 +92,13 @@ dialog::backdrop {
   opacity: 0.7;
 }
 
-/* https://www.w3schools.com/css/tryit.asp?filename=trycss_align_transform */
 .howto-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  min-width: 95vw;
-  text-align: center;
   border: 0.7rem solid var(--gold);
   border-radius: 0 25px 0 25px ;
+  font-size: 0.9rem;
+  margin: auto;
+  min-width: 95vw;
+  text-align: center;
 }
 
 .howto-modal > * {
