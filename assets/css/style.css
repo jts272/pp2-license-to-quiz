@@ -14,6 +14,7 @@
 
 :root {
   --gold: #976c42;
+  --grey: #c0c0c0;
 }
 
 /* Font Properties */
@@ -70,7 +71,7 @@ header img {
 /* Main Content */
 
 .background {
-  background-color: #c0c0c0;
+  background-color: var(--grey);
   display: flex;
   align-items: center;
   flex-flow: column;
@@ -82,7 +83,7 @@ header img {
 
 .home-container {
   background-color: white;
-  border: 0.7rem solid #976c42;
+  border: 0.7rem solid var(--gold);
   border-radius: 25px 0 25px 0;
   display: flex;
   flex-flow: column;
@@ -93,7 +94,8 @@ header img {
 }
 
 .button {
-  border: 1px solid #976c42;
+  background-color: buttonface;
+  border: 1px solid var(--gold);
   border-radius: 25px;
   color: black;
   cursor: pointer;
@@ -101,6 +103,10 @@ header img {
   font-size: 1.25rem;
   padding: 0.5rem;
   text-align: center;
+}
+
+.button:hover {
+  background-color: var(--grey);
 }
 
 /* How To Play Modal Dialog */
@@ -127,7 +133,7 @@ dialog::backdrop {
 
 .difficulty-container {
   background-color: white;
-  border: 0.7rem solid #976c42;
+  border: 0.7rem solid var(--gold);
   border-radius: 25px 0 25px 0;
   display: flex;
   flex-flow: column;
@@ -148,7 +154,7 @@ dialog::backdrop {
 
 .scores-container {
   background-color: white;
-  border: 0.7rem solid #976c42;
+  border: 0.7rem solid var(--gold);
   border-radius: 25px 0 25px 0;
   display: flex;
   flex-flow: column;
