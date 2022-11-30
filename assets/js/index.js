@@ -11,8 +11,8 @@ console.log(howto, openHowto, closeHowto);
 
 openHowto.addEventListener("click", () => {
   howto.showModal();
-})
+});
 
 closeHowto.addEventListener("click", () => {
   howto.close();
-})
+});
