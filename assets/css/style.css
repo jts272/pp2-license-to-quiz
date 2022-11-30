@@ -95,7 +95,7 @@ header img {
 
 .button {
   background-color: buttonface;
-  border: 1px solid var(--gold);
+  border: 2px solid var(--gold);
   border-radius: 25px;
   color: black;
   cursor: pointer;
@@ -106,7 +106,8 @@ header img {
 }
 
 .button:hover {
-  background-color: var(--grey);
+  background-color: var(--gold);
+  color: white;
 }
 
 /* How To Play Modal Dialog */
