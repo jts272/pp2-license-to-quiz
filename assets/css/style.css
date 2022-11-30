@@ -24,13 +24,15 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
+h2,
+h3 {
   font-family: Jost, sans-serif;
 }
 
 em,
 li,
-p {
+p,
+table {
   font-family: Georgia, serif;
 }
 
@@ -146,6 +148,26 @@ dialog::backdrop {
 .difficulty-container li {
   list-style-type: square;
   margin-left: 1rem;
+}
+
+/* High Scores Page */
+
+.scores-container {
+  background-color: white;
+  border: 0.7rem solid #976c42;
+  border-radius: 25px 0 25px 0;
+  display: flex;
+  flex-flow: column;
+  min-width: 80%;
+  padding: 1rem;
+}
+
+.scores-container table {
+  font-size: 0.9rem;
+}
+
+.scores-container th {
+  text-align: start;
 }
 
 /* Footer */
