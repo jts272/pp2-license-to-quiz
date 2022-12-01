@@ -48,6 +48,10 @@ table {
   text-align: center;
 }
 
+.hide {
+  display: none !important;
+}
+
 /* Header */
 
 header {
