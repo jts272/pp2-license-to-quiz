@@ -94,7 +94,7 @@ header img {
 }
 
 .button {
-  background-color: buttonface;
+  background-color: #eaeaea;
   border: 2px solid var(--gold);
   border-radius: 25px;
   color: black;
