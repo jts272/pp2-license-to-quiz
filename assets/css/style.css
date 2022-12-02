@@ -49,6 +49,10 @@ table {
   text-align: center;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .hide {
   display: none !important;
 }
@@ -174,6 +178,15 @@ dialog::backdrop {
   padding: 1rem;
 }
 
+.game-container div,
+span {
+  font-family: Jost, sans-serif;
+}
+
+.game-container h2 {
+  font-size: 1.2rem;
+}
+
 /* Game Grid Areas */
 
 .counter {
@@ -181,6 +194,7 @@ dialog::backdrop {
 }
 
 .score {
+  font-size: 0.9rem;
   grid-area: score;
 }
 
