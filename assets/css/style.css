@@ -33,6 +33,7 @@ h3 {
 em,
 li,
 p,
+span,
 table {
   font-family: Georgia, serif;
 }
@@ -153,6 +154,90 @@ dialog::backdrop {
 .difficulty-container li {
   list-style-type: square;
   margin-left: 1rem;
+}
+
+.game-container {
+  background-color: white;
+  border: 0.7rem solid var(--gold);
+  border-radius: 25px 0 25px 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "counter counter counter counter score score"
+    "question question question question question question"
+    "label-a btn-a btn-a btn-a btn-a fdbk-a"
+    "label-b btn-b btn-b btn-b btn-b fdbk-b"
+    "label-c btn-c btn-c btn-c btn-c fdbk-c"
+    ". fifty-counter fifty-btn fifty-btn . next";
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 80%;
+  padding: 1rem;
+}
+
+/* Game Grid Areas */
+
+.counter {
+  grid-area: counter;
+}
+
+.score {
+  grid-area: score;
+}
+
+.question {
+  grid-area: question;
+}
+
+.label-a {
+  grid-area: label-a;
+}
+
+.btn-a {
+  grid-area: btn-a;
+}
+
+.fdbk-a {
+  grid-area: fdbk-a;
+}
+
+.label-b {
+  grid-area: label-b;
+}
+
+.btn-b {
+  grid-area: btn-b;
+}
+
+.fdbk-b {
+  grid-area: fdbk-b;
+}
+
+.fdbk-a {
+  grid-area: fdbk-a;
+}
+
+.label-c {
+  grid-area: label-c;
+}
+
+.btn-c {
+  grid-area: btn-c;
+}
+
+.fdbk-c {
+  grid-area: fdbk-c;
+}
+
+.fifty-counter {
+  grid-area: fifty-counter;
+}
+
+.fifty-btn {
+  grid-area: fifty-btn;
+}
+
+.next {
+  grid-area: next;
 }
 
 /* High Scores Page */
