@@ -14,7 +14,9 @@
 
 :root {
   --gold: #976c42;
+  --green: #003d00;
   --grey: #c0c0c0;
+  --red: #660000;
 }
 
 /* Font Properties */
@@ -25,6 +27,7 @@ h1 {
   font-weight: bold;
 }
 
+button,
 h2,
 h3 {
   font-family: Jost, sans-serif;
@@ -161,6 +164,7 @@ dialog::backdrop {
 }
 
 .game-container {
+  align-items: center;
   background-color: white;
   border: 0.7rem solid var(--gold);
   border-radius: 25px 0 25px 0;
@@ -172,7 +176,7 @@ dialog::backdrop {
     "label-a btn-a btn-a btn-a btn-a fdbk-a"
     "label-b btn-b btn-b btn-b btn-b fdbk-b"
     "label-c btn-c btn-c btn-c btn-c fdbk-c"
-    ". fifty-counter fifty-btn fifty-btn . next";
+    ". fifty-counter fifty-btn fifty-btn next next";
   grid-template-columns: repeat(6, 1fr);
   max-width: 80%;
   padding: 1rem;
@@ -185,6 +189,31 @@ span {
 
 .game-container h2 {
   font-size: 1.2rem;
+}
+
+.game-container button {
+  background-color: #eaeaea;
+  border: 2px solid var(--gold);
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.game-container button:hover {
+  background-color: var(--gold);
+  color: white;
+}
+
+.feedback {
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+#fifty-fifty:hover {
+  background-color: var(--red);
+  color: white;
 }
 
 /* Game Grid Areas */
