@@ -76,3 +76,44 @@ let questionsEasy = [
     remove: 2
   }
 ];
+
+// CONSTANTS - Required for game
+
+// Correct answer score incrementer
+const CORRECT_BONUS = 100;
+// Number of available questions for specified mode
+const MAX_QUESTIONS_EASY = 5;
+
+
+/**
+ * Function to start the game. Resets the values of the question counter and
+ * the score. The spread operator '...' is used to take the contents of the
+ * stated array and adds it to a new variable. This keeps the original array
+ * intact whilst operations are performed on the new variable. Another function
+ * is then called to display a new question and answer set.
+ */
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuestions = [...questionsEasy];
+  console.log(availableQuestions);
+  getNewQuestion();
+};
+
+/**
+ * Function to get a random question. Increments the question counter by one. 
+ * Math floor and Math random are used in conjunction with the length of the
+ * available questions. The current question var declared earlier then takes on 
+ * the index of the available questions array, which was made with the spread
+ * operator from the questions/difficulty array.
+ */
+
+getNewQuestion = () => {
+  questionCounter++;
+  let questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  question.innerText = currentQuestion.question;
+
+}
+
+startGame();
