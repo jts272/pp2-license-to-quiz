@@ -114,9 +114,18 @@ startGame = () => {
  * When the question is used, the splice method removes that question from the
  * array of available questions. The accepting answers state is finally set to
  * true.
+ * 
+ * The if statement goes to the end game page, on the condition that there are
+ * no more questions left OR if the questions counter number is greater than or
+ * equal to the maximum number of questions.
  */
 
 getNewQuestion = () => {
+  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS_EASY) 
+  {
+    // go to end game page
+    return window.location.assign("end.html");
+  }
   questionCounter++;
   let questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
@@ -130,7 +139,19 @@ getNewQuestion = () => {
   availableQuestions.splice(questionIndex, 1);
 
   acceptingAnswers = true;
+};
 
-}
+choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    console.log(e.target);
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+    console.log(selectedAnswer);
+    getNewQuestion();
+  });
+});
 
 startGame();
