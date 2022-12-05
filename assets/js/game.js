@@ -19,7 +19,7 @@ console.log(choices);
 // Object for the current question
 let currentQuestion = {};
 // Create delay state for when game is accepting an answer
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 // Starting point for score
 let score = 0;
 // Counter for which question the player is on
@@ -106,6 +106,14 @@ startGame = () => {
  * available questions. The current question var declared earlier then takes on 
  * the index of the available questions array, which was made with the spread
  * operator from the questions/difficulty array.
+ * 
+ * For the question choices, the function gets the data-number attribute as
+ * labelled in the HTML. For each of the elements, the function displays the
+ * choice from the object and uses the number from the dataset e.g. 'choice1'.
+ * 
+ * When the question is used, the splice method removes that question from the
+ * array of available questions. The accepting answers state is finally set to
+ * true.
  */
 
 getNewQuestion = () => {
@@ -113,6 +121,15 @@ getNewQuestion = () => {
   let questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
+
+  choices.forEach( choice => {
+    let number = choice.dataset["number"];
+    choice.innerText = currentQuestion["choice" + number];
+  });
+
+  availableQuestions.splice(questionIndex, 1);
+
+  acceptingAnswers = true;
 
 }
 
