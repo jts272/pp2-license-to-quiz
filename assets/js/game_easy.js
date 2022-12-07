@@ -7,6 +7,58 @@
 // their answers and finally a div to display the user's score. The content of
 // this quiz will be displayed via JavaScript functions.
 
+// The questions used for the easy quiz. 
+
+const questionsEasy = [
+  {
+    question: "The James Bond movies are based on the novels by which British\
+    author?",
+    answers: {
+      a: "J. R. R. Tolkien",
+      b: "Ian Fleming",
+      c: "George Orwell"
+    },
+    correctAnswer: "b"
+  },
+  {
+    question: "Which artist sang the theme song 'Skyfall'?",
+    answers: {
+      a: "Adele",
+      b: "Sam Smith",
+      c: "Shirley Bassey"
+    },
+    correctAnswer: "a"
+  },
+  {
+    question: "Which secret service agency does 007 work for?",
+    answers: {
+      a: "NCA",
+      b: "MI6",
+      c: "CIA"
+    },
+    correctAnswer: "b"
+  },
+  {
+    question: "Which actor made his first appearance as James Bond in 1995's\
+    'GoldenEye'?",
+    answers: {
+      a: "Sean Bean",
+      choice2: "Pierce Brosnan",
+      choice3: "Sean Connery"
+    },
+    correctAnswer: "b"
+  },
+  {
+    question: "What was the first James Bond movie?",
+    answers: {
+      choice1: "Goldfinger",
+      choice2: "Casino Royale",
+      choice3: "Dr. No"
+    },
+    correctAnswer: "c"
+  };
+];
+
 /** 
  * This function will generate the quiz content. It requires input from the quiz
  * questions, the container for the question and answers, the submit button and
