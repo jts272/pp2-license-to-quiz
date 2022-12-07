@@ -9,8 +9,7 @@
 
 // The questions used for the easy quiz. 
 
-const questionsEasy = [
-  {
+const questionsEasy = [{
     question: "The James Bond movies are based on the novels by which British\
     author?",
     answers: {
@@ -79,19 +78,51 @@ console.log(quizResults);
 
 function createQuiz(questions, quizQuestions, submitButton, quizResults) {
 
+  /** 
+   * The function will show the questions. In general, it will show the question,
+   * as well as its answer choices.
+   */
+
   function displayQuestions(questions, quizQuestions) {
-    // code goes here
-  };
 
-  function displayResults(questions, quizQuestions, quizResults) {
-    // code goes here
-  };
+    // Create vars to store the output and answer choices:
+    let output = [];
+    let answers;
 
-  // Display the questions
-  displayQuestions(questions, quizQuestions);
+    // For loop to address each question:
+    for (let i = 0; i < questions.length; i++) {
+      // Firstly, reset the answers list to empy array:
+      answers = [];
+      // For loop to address each available answer:
+      for (letter in questions[i].answers) {
+        // Add a radio button for each available answer:
+        answers.push(
+          '<label>' +
+          '<input type="radio" name="question' + i + '" value="' + letter +
+          '">' + letter + ': ' + questions[i].answers[letter] + '</label>'
+        );
+      };
+      // Add this question and its answers to the output:
+      output.push(
+        '<div class="question">' + questions[i].question + '</div>' +
+        '<div class="answers">' + answers.join('') + '</div>'
+      );
+    };
+    // Combine the output list into one HTML string and put it on the page:
+    quizContainer.innerHTML = output.join('');
 
-  // Display results where user clicks the submit button
-  submitButton.onclick = function () {
-    displayResults(questions, quizQuestions, quizResults);
-  };
+
+  }
+};
+
+function displayResults(questions, quizQuestions, quizResults) {
+  // code goes here
+};
+
+// Display the questions
+displayQuestions(questions, quizQuestions);
+
+// Display results where user clicks the submit button
+submitButton.onclick = function () {
+  displayResults(questions, quizQuestions, quizResults);
 };
