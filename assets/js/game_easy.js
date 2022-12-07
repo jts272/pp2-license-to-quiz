@@ -56,8 +56,18 @@ const questionsEasy = [
       choice3: "Dr. No"
     },
     correctAnswer: "c"
-  };
+  }
 ];
+
+// 'Get' elements used in the quiz to store as variables
+
+const quizQuestions = document.getElementById("quiz-questions");
+const submitButton = document.getElementById("submit");
+const quizResults = document.getElementById("quiz-results");
+
+console.log(quizQuestions);
+console.log(submitButton);
+console.log(quizResults);
 
 /** 
  * This function will generate the quiz content. It requires input from the quiz
