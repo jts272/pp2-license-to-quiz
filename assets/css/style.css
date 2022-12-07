@@ -322,3 +322,13 @@ div.socials * {
   font-size: 2rem;
   text-decoration: none;
 }
+
+/* Quiz Container */
+
+.quiz-container {
+  border: 0.7rem solid var(--gold);
+  border-radius: 25px 0 25px 0;
+  background-color: white;
+  min-height: 80vh;
+  min-width: 80vw;
+}
