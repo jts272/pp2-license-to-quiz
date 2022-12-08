@@ -150,7 +150,8 @@ dialog::backdrop {
   border-radius: 25px 0 25px 0;
   display: flex;
   flex-flow: column;
-  min-width: 80%;
+  max-width: 80vw;
+  min-width: 80vw;
   padding: 1rem;
 }
 
@@ -160,7 +161,12 @@ dialog::backdrop {
 
 .difficulty-container li {
   list-style-type: square;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  text-align: center;
+}
+
+.difficulty-container p {
+  margin-top: 0.5rem;
 }
 
 .game-container {
