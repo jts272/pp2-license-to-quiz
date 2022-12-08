@@ -13,7 +13,7 @@
 // The questions used for the easy quiz:
 
 const questionsEasy = [{
-  question: "The James Bond movies are based on the novels by which British\
+  question: "The James Bond movies are based on the novels by which British \
 author?",
   answers: {
     A: "J. R. R. Tolkien",
