@@ -13,27 +13,27 @@ const questionsEasy = [{
     question: "The James Bond movies are based on the novels by which British\
     author?",
     answers: {
-      a: "J. R. R. Tolkien",
-      b: "Ian Fleming",
-      c: "George Orwell"
+      A: "J. R. R. Tolkien",
+      B: "Ian Fleming",
+      C: "George Orwell"
     },
     correctAnswer: "b"
   },
   {
     question: "Which artist sang the theme song 'Skyfall'?",
     answers: {
-      a: "Adele",
-      b: "Sam Smith",
-      c: "Shirley Bassey"
+      A: "Adele",
+      B: "Sam Smith",
+      C: "Shirley Bassey"
     },
     correctAnswer: "a"
   },
   {
     question: "Which secret service agency does 007 work for?",
     answers: {
-      a: "NCA",
-      b: "MI6",
-      c: "CIA"
+      A: "NCA",
+      B: "MI6",
+      C: "CIA"
     },
     correctAnswer: "b"
   },
@@ -41,18 +41,18 @@ const questionsEasy = [{
     question: "Which actor made his first appearance as James Bond in 1995's\
     'GoldenEye'?",
     answers: {
-      a: "Sean Bean",
-      choice2: "Pierce Brosnan",
-      choice3: "Sean Connery"
+      A: "Sean Bean",
+      B: "Pierce Brosnan",
+      C: "Sean Connery"
     },
     correctAnswer: "b"
   },
   {
     question: "What was the first James Bond movie?",
     answers: {
-      choice1: "Goldfinger",
-      choice2: "Casino Royale",
-      choice3: "Dr. No"
+      A: "Goldfinger",
+      B: "Casino Royale",
+      C: "Dr. No"
     },
     correctAnswer: "c"
   }
@@ -109,14 +109,21 @@ function createQuiz(questions, quizQuestions, submitButton, quizResults) {
       );
     };
     // Combine the output list into one HTML string and put it on the page:
-    quizContainer.innerHTML = output.join('');
+    quizQuestions.innerHTML = output.join('');
 
 
   }
 };
 
+/**
+ * In this function, it will find the selected answer for each question. It will
+ * respond according to if the answer is correct or incorrect. It will also show
+ * the number of correct answers out of the total questions.
+ */
+
 function displayResults(questions, quizQuestions, quizResults) {
-  // code goes here
+  // Get the answer containers from the quiz
+  let answerContainers = quiz
 };
 
 // Display the questions
@@ -126,3 +133,4 @@ displayQuestions(questions, quizQuestions);
 submitButton.onclick = function () {
   displayResults(questions, quizQuestions, quizResults);
 };
+
