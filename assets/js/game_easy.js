@@ -17,7 +17,7 @@ const questionsEasy = [{
       B: "Ian Fleming",
       C: "George Orwell"
     },
-    correctAnswer: "b"
+    correctAnswer: "B"
   },
   {
     question: "Which artist sang the theme song 'Skyfall'?",
@@ -26,7 +26,7 @@ const questionsEasy = [{
       B: "Sam Smith",
       C: "Shirley Bassey"
     },
-    correctAnswer: "a"
+    correctAnswer: "A"
   },
   {
     question: "Which secret service agency does 007 work for?",
@@ -35,7 +35,7 @@ const questionsEasy = [{
       B: "MI6",
       C: "CIA"
     },
-    correctAnswer: "b"
+    correctAnswer: "B"
   },
   {
     question: "Which actor made his first appearance as James Bond in 1995's\
@@ -45,7 +45,7 @@ const questionsEasy = [{
       B: "Pierce Brosnan",
       C: "Sean Connery"
     },
-    correctAnswer: "b"
+    correctAnswer: "B"
   },
   {
     question: "What was the first James Bond movie?",
@@ -54,7 +54,7 @@ const questionsEasy = [{
       B: "Casino Royale",
       C: "Dr. No"
     },
-    correctAnswer: "c"
+    correctAnswer: "C"
   }
 ];
 
@@ -122,14 +122,39 @@ function createQuiz(questions, quizQuestions, submitButton, quizResults) {
  */
 
 function displayResults(questions, quizQuestions, quizResults) {
-  // Get the answer containers from the quiz
-  let answerContainers = quiz
+  // Get the answer containers from the quiz:
+  let answerContainers = quizQuestions.querySelectorAll(".answers");
+
+  // Keep track of user's answers:
+  let userAnswer = "";
+  let numCorrect = 0;
+
+  // For loop for each question:
+  for (let i = 0; i < questions.length; i++) {
+    // Find the selected answer:
+    userAnswer =
+    (answerContainers[i].querySelector('input[name=question'+ i +']:checked') ||
+    {}).value;
+    // If correct:
+    if (userAnswer === questions[i].correctAnswer) {
+      // Increase number of correct answers:
+      numCorrect++
+      // Colour answer green:
+      answerContainers[i].style.color = "#003d00";
+    } else {
+      // Colour the answer red:
+      answerContainers[i].style.color = "#660000";
+    }
+  }
+
+  // Show the number of correct answers out of the total:
+  quizResults.innerHTML = numCorrect + "out of" + questions.length + "!";
 };
 
-// Display the questions
+// Display the questions:
 displayQuestions(questions, quizQuestions);
 
-// Display results where user clicks the submit button
+// Display results where user clicks the submit button:
 submitButton.onclick = function () {
   displayResults(questions, quizQuestions, quizResults);
 };
