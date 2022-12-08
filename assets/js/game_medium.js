@@ -7,6 +7,11 @@ let qOf = document.querySelector("#question-of");
 
 let score = document.querySelector("#score");
 
+let question = document.querySelector(".question");
+
+let choiceButtons = document.querySelectorAll(".answer-choice");
+let choiceButtonsArray = Array.from(choiceButtons);
+
 let choiceA = document.querySelector(".btn-a");
 let choiceB = document.querySelector(".btn-b");
 let choiceC = document.querySelector(".btn-c");
@@ -30,3 +35,11 @@ let questionsMedium = [
     correct: "B"
   }
 ];
+
+// Guide: https://gamedevacademy.org/javascript-quiz-tutorial/
+
+let singleQuestion = {
+  title: "Who was the second actor to portray James Bond in a feature film?",
+  alternatives: ["Roger Moore", "Timothy Dalton", "George Lazenby"],
+  correctAnswer: 2
+};
