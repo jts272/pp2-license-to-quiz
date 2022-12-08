@@ -329,6 +329,38 @@ div.socials * {
   border: 0.7rem solid var(--gold);
   border-radius: 25px 0 25px 0;
   background-color: white;
-  min-height: 80vh;
-  min-width: 80vw;
+  display: flex;
+  flex-flow: column;
+  /* min-height: 80vh; */
+  max-width: 80vw;
+}
+
+/* Quiz guide stuff */
+
+#quiz {
+  display: flex;
+  flex-flow: column;
+  font-family: Jost, sans-serif;
+  padding: 1rem;
+}
+
+#answers {
+  display: flex;
+}
+
+#submit {
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 0.5rem;
+}
+
+#results {
+  display: flex;
+  justify-content: center;
+  font-family: Jost;
+  padding-bottom: 1rem;
+}
+
+#quiz > div.question {
+  padding: 0.5rem 0;
 }
