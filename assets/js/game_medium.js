@@ -57,8 +57,9 @@ let app = {
   startGame: function () {
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
-      element.addEventListener("click", function () {
+      element.addEventListener("click", function () { 
         console.log("Check Correct Answer");
+        this.checkAnswer(index);
       });
     });
     // 'this' refers to the 'app' object. See below that showQuestion is now a
@@ -73,12 +74,33 @@ let app = {
   the function definition and the arguments are in the actual call.
   */
   showQuestion: function (q) {
+    // Keep track of the current question by storing it in the context of the
+    // app object
+    this.currentQuestion = q;
     // Display the question text in the question container
     question.textContent = q.title;
     // Display the answer text in 'each' container. See Array.forEach(); syntax
     choiceButtons.forEach(function (element, index) {
       element.textContent = q.alternatives[index];
     });
+
+  },
+
+  /*
+  This is function can now be used outside of the startGame function, which is
+  only run once at the start of the game. The currentQuestion has been stored in
+  'q' inside the showQuestion function. The 'q' from the showQuestion parameter
+  is now the question object passed in to the function call in the startGame
+  method. From here, I can access its correctAnswer property from the original
+  object. The userSelected placeholder takes the checkAnswer(index) from the
+  startGame method.
+   */
+  checkAnswer: function(userSelected) {
+    if (this.currentQuestion.correctAnswer == userSelected) {
+      console.log("Correct!");
+    } else {
+      console.log("Incorrect!");
+    }
 
   }
 
