@@ -119,9 +119,6 @@ let app = {
   the function definition and the arguments are in the actual call.
   */
   showQuestion: function (q) {
-    // Keep track of the current question by storing it in the context of the
-    // app object
-    this.currentQuestion = q;
     // Display the question text in the question container
     question.textContent = q.title;
     // Display the answer text in 'each' container. See Array.forEach(); syntax
@@ -141,9 +138,12 @@ let app = {
   startGame method.
    */
   checkAnswer: function(userSelected) {
+    // Create local var for the current question, which comes from the
+    // startGame method that gets incremented.
+    let currentQuestion = questionsMedium[this.currentPosition];
     // This checks to see if the value of the correctAnswer in the question
     // array matches the value of the index of the user selected button
-    if (this.currentQuestion.correctAnswer == userSelected) {
+    if (currentQuestion.correctAnswer == userSelected) {
       console.log("Correct!");
     } else {
       console.log("Incorrect!");
