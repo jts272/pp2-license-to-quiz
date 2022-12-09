@@ -106,6 +106,9 @@ let app = {
         this.checkAnswer(index);
       }.bind(this));
     }.bind(this));
+    // Call to update the score on game start. It is 'updated' to its initial
+    // value of 0 inside this startGame method
+    this.updateScore();
     // 'this' refers to the 'app' object. See below that showQuestion is now a
     // method of the app object. The questionsMedium is given the index of 0,
     // which it gets from the var at the top of this method. Its value is
@@ -151,6 +154,9 @@ let app = {
     } else {
       console.log("Incorrect!");
     }
+    // After checking the answer, refresh the current score by calling the
+    // appropriate method
+    this.updateScore();
     // After checking the answer, increase the value of currentPosition from the
     // startGame method, by calling the increasePosition method from below
     this.increasePosition();
@@ -179,6 +185,16 @@ let app = {
     }
 
 
+  },
+
+  /*
+  This method will show the updated score to the user. The score DOM element was
+  declared globally at the top of the script and is used here to modify its text
+  content.
+  */
+
+  updateScore: function() {
+    score.textContent = this.currentScore;
   }
 
   
