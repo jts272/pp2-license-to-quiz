@@ -19,10 +19,8 @@ let choiceC = document.querySelector(".btn-c");
 
 let next = document.querySelector(".next");
 
-let questionsMedium = [
-  {
-    question: 
-    "What initials are on the coffin at the beginning of Thunderball?",
+let questionsMedium = [{
+    question: "What initials are on the coffin at the beginning of Thunderball?",
     answerA: "A.C",
     answerB: "E.L",
     answerC: "J.B",
@@ -47,6 +45,21 @@ let singleQuestion = {
   correctAnswer: 2
 };
 
+// This function adds the event listeners for clicks only once upon game start.
+// The forEach method from the showQuestion function can be re-used to add the 
+// event listeners to each element
+function startGame() {
+  // Add event listeners to the choice buttons
+  choiceButtons.forEach(function (element, index) {
+    element.addEventListener("click", function () {
+      console.log("Check Correct Answer");
+    });
+  });
+  // showQuestion function call moved inside here for when startGame function is
+  // called instead of being called in global scope
+  showQuestion(singleQuestion);
+}
+
 // This function is 'ready to receive' the placeholder of 'q'. When the function
 // is called, I can substitute the q in the function parentheses for the actual
 // singleQuestion object as its argument. In other words, the parameters are in
@@ -57,23 +70,10 @@ function showQuestion(q) {
   // Display the answer text in 'each' container. See Array.forEach(); syntax
   choiceButtons.forEach(function (element, index) {
     element.textContent = q.alternatives[index];
-    // Elements are already established with forEach so I can add the event
-    // listeners on the element paramater to add it to all of them at once
-    element.addEventListener("click", function() {
-      console.log("Clicked: " + index);
-      if (index == q.correctAnswer) {
-        console.log("Correct Answer!");
-      } else {
-        console.log("Wrong Answer!");
-      }
-    });
   });
 };
 
 // The actual function call. Where the function definition would have used the
 // placeholder of 'q', it will use the object assigned in the argument.
-showQuestion(singleQuestion);
 
-next.addEventListener("click", function(){
-  // console.log("Clicked!");
-});
+startGame();
