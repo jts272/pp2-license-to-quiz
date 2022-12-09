@@ -179,6 +179,7 @@ let app = {
   */
   increasePosition: function() {
     this.currentPosition++;
+    // This simply displays the array number plus one to make sense to the user
     qNum.textContent = this.currentPosition + 1;
 
 
@@ -188,6 +189,11 @@ let app = {
     if (this.currentPosition == questionsMedium.length) {
       alert("Game Over!");
       this.currentPosition = 0;
+      // Fix the question counter going above the amount of questions
+      qNum.textContent = "1";
+      // Fix the score not resetting on automatic game restart
+      score.textContent = "0";
+      this.currentScore = 0;
     }
 
 
