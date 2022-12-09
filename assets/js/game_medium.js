@@ -95,6 +95,8 @@ let app = {
   startGame: function () {
     // Create var to store the current position, initialized to 0
     this.currentPosition = 0;
+    // Create var to store the current score, initialized to 0
+    this.currentScore = 0;
 
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
@@ -145,6 +147,7 @@ let app = {
     // array matches the value of the index of the user selected button
     if (currentQuestion.correctAnswer == userSelected) {
       console.log("Correct!");
+      this.currentScore++;
     } else {
       console.log("Incorrect!");
     }
