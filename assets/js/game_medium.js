@@ -52,16 +52,18 @@ let app = {
   /*
   This function adds the event listeners for clicks only once upon game start.
   The forEach method from the showQuestion function can be re-used to add the 
-  event listeners to each element
+  event listeners to each element. bind(this) is used to ensure the context of
+  'this' is not lost after the forEach method.
   */
   startGame: function () {
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
       element.addEventListener("click", function () { 
         console.log("Check Correct Answer");
+        // Call the checkAnswer method and pass in the index of choiceButtons
         this.checkAnswer(index);
-      });
-    });
+      }.bind(this));
+    }.bind(this));
     // 'this' refers to the 'app' object. See below that showQuestion is now a
     // method of the app object.
     this.showQuestion(singleQuestion);
@@ -96,6 +98,8 @@ let app = {
   startGame method.
    */
   checkAnswer: function(userSelected) {
+    // This checks to see if the value of the correctAnswer in the question
+    // array matches the value of the index of the user selected button
     if (this.currentQuestion.correctAnswer == userSelected) {
       console.log("Correct!");
     } else {
