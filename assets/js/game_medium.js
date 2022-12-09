@@ -97,6 +97,9 @@ let app = {
     this.currentPosition = 0;
     // Create var to store the current score, initialized to 0
     this.currentScore = 0;
+    // Dynamically display the number of questions for quiz difficulty
+
+    qOf.textContent = questionsMedium.length;
 
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
@@ -115,6 +118,7 @@ let app = {
     // increased when the increasePosition method is called from inside the
     // checkAnswer method
     this.showQuestion(questionsMedium[this.currentPosition]);
+
   },
 
   /*
@@ -128,7 +132,7 @@ let app = {
     question.textContent = q.title;
     // Display the answer text in 'each' container. See Array.forEach(); syntax
     choiceButtons.forEach(function (element, index) {
-      element.textContent = q.alternatives[index];
+      element.textContent = q.alternatives[index];      
     });
 
   },
@@ -150,7 +154,7 @@ let app = {
     // array matches the value of the index of the user selected button
     if (currentQuestion.correctAnswer == userSelected) {
       console.log("Correct!");
-      this.currentScore++;
+      this.currentScore += 100;
     } else {
       console.log("Incorrect!");
     }
@@ -175,6 +179,8 @@ let app = {
   */
   increasePosition: function() {
     this.currentPosition++;
+    qNum.textContent = this.currentPosition + 1;
+
 
     // NTS: Check if the 'questionsMedium' can be changed with placeholder in
     // case I want to use a different question array!
@@ -195,6 +201,8 @@ let app = {
 
   updateScore: function() {
     score.textContent = this.currentScore;
+    qNum.textContent = this.currentPosition + 1;
+    console.log(this.currentPosition);
   }
 
   
