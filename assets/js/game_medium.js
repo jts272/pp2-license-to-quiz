@@ -19,19 +19,56 @@ let choiceC = document.querySelector(".btn-c");
 
 let next = document.querySelector(".next");
 
-let questionsMedium = [{
-    question: "What initials are on the coffin at the beginning of Thunderball?",
-    answerA: "A.C",
-    answerB: "E.L",
-    answerC: "J.B",
-    correct: "C"
+let questionsMedium = [
+  {
+    title: "What initials are on the coffin at the beginning of Thunderball?",
+    alternatives: ["A.C", "E.L", "J.B"],
+    correctAnswer: 2
   },
   {
-    question: "What was the first Bond film NOT based on a book?",
-    answerA: "Moonraker",
-    answerB: "The Spy Who Loved Me",
-    answerC: "You Only Live Twice",
-    correct: "B"
+    title: "What was the first Bond film NOT based on a book?",
+    alternatives: ["Moonraker", "The Spy Who Loved Me", "You Only Live Twice"],
+    correctAnswer: 1
+  },
+  {
+    title: "Who is the villain in 'The Man with the Golden Gun?",
+    alternatives: ["Scaramanga", "Nick Nack", "Baron Samedi"],
+    correctAnswer: 0
+  },
+  {
+    title: "How did James Bond's parents die?",
+    alternatives: ["Car crash", "Armed robbery shooting", "Climbing accident"],
+    correctAnswer: 2
+  },
+  {
+    title: "What type of car does Bond drive in Moonraker?",
+    alternatives: ["Lotus", "Aston Martin", "None"],
+    correctAnswer: 2
+  },
+  {
+    title: "What alias does Bond use in 'SPECTRE'?",
+    alternatives: ["Charles Darwin", "Mickey Mouse", "Felix Leiter"],
+    correctAnswer: 1
+  },
+  {
+    title: "What was the initial title for 'License to Kill'?",
+    alternatives: ["License to Thrill", "License to Spy", "License Revoked"],
+    correctAnswer: 2
+  },
+  {
+    title: "Which of these titles was NOT produced by Eon Productions?",
+    alternatives: ["Never Say Never Again", "Thunderball", "Live and Let Die"],
+    correctAnswer: 0
+  },
+  {
+    title: "For which film did Sean Connery return?",
+    alternatives: ["Diamonds are Forever", "Goldfinger", "Octopussy"],
+    correctAnswer: 0
+  },
+  {
+    title: "Which children's song featured in the opening of 'Dr. No'?",
+    alternatives: ["Baa Baa Black Sheep", "Jack and Jill", "Three Blind Mice"],
+    correctAnswer: 2
   }
 ];
 
