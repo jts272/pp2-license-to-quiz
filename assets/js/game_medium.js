@@ -93,6 +93,9 @@ let app = {
   'this' is not lost after the forEach method.
   */
   startGame: function () {
+    // Create var to store the current position, initialized to 0
+    this.currentPosition = 0;
+
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
       element.addEventListener("click", function () { 
@@ -102,8 +105,11 @@ let app = {
       }.bind(this));
     }.bind(this));
     // 'this' refers to the 'app' object. See below that showQuestion is now a
-    // method of the app object.
-    this.showQuestion(singleQuestion);
+    // method of the app object. The questionsMedium is given the index of 0,
+    // which it gets from the var at the top of this method. Its value is
+    // increased when the increasePosition method is called from inside the
+    // checkAnswer method
+    this.showQuestion(questionsMedium[this.currentPosition]);
   },
 
   /*
@@ -142,8 +148,37 @@ let app = {
     } else {
       console.log("Incorrect!");
     }
+    // After checking the answer, increase the value of currentPosition from the
+    // startGame method, by calling the increasePosition method from below
+    this.increasePosition();
+    // Then, show the next question, after the above call increases position.
+    // This is simply copied from the startGame function, which the method
+    // directly above increments by 1
+    this.showQuestion(questionsMedium[this.currentPosition]);
+
+  },
+
+  /*
+  This method will increment the currentPosition value by 1. It will be called
+  each time the checkAnswer method is used. An if statement is included to
+  signal the end of the game when the current position is the same as the number
+  of questions in the array. Also resets the current position back to 0.
+  */
+  increasePosition: function() {
+    this.currentPosition++;
+
+    // NTS: Check if the 'questionsMedium' can be changed with placeholder in
+    // case I want to use a different question array!
+
+    if (this.currentPosition == questionsMedium.length) {
+      alert("Game Over!");
+      this.currentPosition = 0;
+    }
+
 
   }
+
+  
 
 };
 
