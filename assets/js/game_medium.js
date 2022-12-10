@@ -2,6 +2,8 @@
 
 // Get elements
 
+let gameContainer = document.querySelector(".game-container");
+
 let qNum = document.querySelector("#question-number");
 let qOf = document.querySelector("#question-of");
 
@@ -186,6 +188,11 @@ let app = {
     // case I want to use a different question array!
 
     if (this.currentPosition == questionsMedium.length) {
+      // Hide the game container upon game completion
+      gameContainer.classList.add("hide");
+      // Show score screen
+      this.showScoreScreen();
+      // Alert the final game score
       alert(`Game Over! You Scored ${this.currentScore} points!`);
       this.currentPosition = 0;
       // Fix the question counter going above the amount of questions
@@ -222,14 +229,13 @@ let app = {
   simply reused from the checkAnswer method.
   */
 
-
   showFeedback: function (isCorrect) {
     // Create empty string for the user feedback result p element
     let result = "";
     // Checks if answer is correct or not, based on the if statement in the
     // checkAnswer method.
     if (isCorrect) {
-      result = "Correct!"
+      result = "Correct!";
     } else {
       // Get the current question
       let currentQuestion = questionsMedium[this.currentPosition];
@@ -245,6 +251,22 @@ let app = {
     // Assign the text content of the result element to the value based on the
     // if statement
     userFeedback.textContent = result;
+
+  },
+
+  showScoreScreen: function() {
+    // Create var for score screen div
+    let scoreScreen = `
+      <div>
+        <h2>Mission Over!</h2>
+        <p>Your final score was ${this.currentScore}!</p>
+      
+      </div>
+    `
+    // Get main background element
+    let background = document.querySelector(".background");
+    // Inject the above HTML onto the background element
+    background.innerHTML = scoreScreen;
 
   }
 };
