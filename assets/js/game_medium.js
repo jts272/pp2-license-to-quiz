@@ -11,8 +11,9 @@ let question = document.querySelector(".question");
 
 let choiceButtons = document.querySelectorAll(".answer-choice");
 
-let questionsMedium = [
-  {
+let userFeedback = document.querySelector(".user-feedback");
+
+let questionsMedium = [{
     title: "What initials are on the coffin at the beginning of Thunderball?",
     alternatives: ["A.C", "E.L", "J.B"],
     correctAnswer: 2
@@ -95,7 +96,7 @@ let app = {
 
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
-      element.addEventListener("click", function () { 
+      element.addEventListener("click", function () {
         console.log("Check Correct Answer");
         // Call the checkAnswer method and pass in the index of choiceButtons
         this.checkAnswer(index);
@@ -125,7 +126,7 @@ let app = {
     question.textContent = q.title;
     // Display the answer text in 'each' container. See Array.forEach(); syntax
     choiceButtons.forEach(function (element, index) {
-      element.textContent = q.alternatives[index];      
+      element.textContent = q.alternatives[index];
     });
 
   },
@@ -139,7 +140,7 @@ let app = {
   object. The userSelected placeholder takes the checkAnswer(index) from the
   startGame method.
    */
-  checkAnswer: function(userSelected) {
+  checkAnswer: function (userSelected) {
     // Create local var for the current question, which comes from the
     // startGame method that gets incremented.
     let currentQuestion = questionsMedium[this.currentPosition];
@@ -148,8 +149,12 @@ let app = {
     if (currentQuestion.correctAnswer == userSelected) {
       console.log("Correct!");
       this.currentScore += 100;
+      // Call the user feedback method when correct
+      this.showFeedback(true);
     } else {
       console.log("Incorrect!");
+      // Call the user feedback method when incorrect
+      this.showFeedback(false);
     }
     // After checking the answer, refresh the current score by calling the
     // appropriate method
@@ -170,7 +175,7 @@ let app = {
   signal the end of the game when the current position is the same as the number
   of questions in the array. Also resets the current position back to 0.
   */
-  increasePosition: function() {
+  increasePosition: function () {
     this.currentPosition++;
     // This simply displays the array number plus one to make sense to the user
     qNum.textContent = this.currentPosition + 1;
@@ -198,16 +203,36 @@ let app = {
   content.
   */
 
-  updateScore: function() {
+  updateScore: function () {
     // Set score element to the value of the currentScore var
     score.textContent = `Score: ${this.currentScore}`;
     // Set the question number element to the array index + 1
     qNum.textContent = this.currentPosition + 1;
     console.log(this.currentPosition);
+  },
+
+  /*
+  This method will give feedback to the user when they answer a question. The
+  result will vary depending on if the answer was correct or not. The method is
+  called with a true or false value in the if statement of checkAnswer.
+  */
+
+
+  showFeedback: function (isCorrect) {
+    // Create empty string for the user feedback result p element
+    let result = "";
+    // Checks if answer is correct or not, based on the if statement in the
+    // checkAnswer method.
+    if (isCorrect) {
+      result = "Correct!"
+    } else {
+      result = "Incorrect!"
+    }
+    // Assign the text content of the result element to the value based on the
+    // if statement
+    userFeedback.textContent = result;
+
   }
-
-  
-
 };
 
 // Start game function is now a method of the app object and is called as shown
