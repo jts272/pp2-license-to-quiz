@@ -118,11 +118,6 @@ header img {
   text-align: center;
 }
 
-/* .button:hover {
-  background-color: var(--gold);
-  color: white;
-} */
-
 /* How To Play Modal Dialog */
 
 dialog::backdrop {
@@ -211,10 +206,10 @@ span {
   text-align: center;
 }
 
-/* .game-container button:hover {
+.game-container button:hover {
   background-color: var(--gold);
   color: white;
-} */
+}
 
 /* Game Grid Areas */
 
@@ -313,4 +308,18 @@ div.socials * {
   min-height: 60vh;
   min-width: 80%;
   padding: 1rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+  .background {
+    background-color: red;
+  }
+
+  /* Pseudo Elements */
+  .button:hover {
+    background-color: var(--gold);
+    color: white;
+  }
 }
