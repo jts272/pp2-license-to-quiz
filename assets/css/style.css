@@ -290,7 +290,6 @@ span {
 }
 
 .user-feedback {
-  font-family: Georgia, serif !important;
   grid-area: user-fdbk;
 }
 
