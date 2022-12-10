@@ -123,7 +123,7 @@ let app = {
     this.currentScore = 0;
     // Dynamically display the number of questions for quiz difficulty
 
-    qOf.textContent = questionsMedium.length;
+    qOf.textContent = questionsEasy.length;
 
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
@@ -138,11 +138,11 @@ let app = {
     // value of 0 inside this startGame method
     this.updateScore();
     // 'this' refers to the 'app' object. See below that showQuestion is now a
-    // method of the app object. The questionsMedium is given the index of 0,
+    // method of the app object. The questionsEasy is given the index of 0,
     // which it gets from the var at the top of this method. Its value is
     // increased when the increasePosition method is called from inside the
     // checkAnswer method
-    this.showQuestion(questionsMedium[this.currentPosition]);
+    this.showQuestion(questionsEasy[this.currentPosition]);
 
   },
 
@@ -174,7 +174,7 @@ let app = {
   checkAnswer: function (userSelected) {
     // Create local var for the current question, which comes from the
     // startGame method that gets incremented.
-    let currentQuestion = questionsMedium[this.currentPosition];
+    let currentQuestion = questionsEasy[this.currentPosition];
     // This checks to see if the value of the correctAnswer in the question
     // array matches the value of the index of the user selected button
     if (currentQuestion.correctAnswer == userSelected) {
@@ -197,7 +197,7 @@ let app = {
     // Then, show the next question, after the above call increases position.
     // This is simply copied from the startGame function, which the method
     // directly above increments by 1
-    this.showQuestion(questionsMedium[this.currentPosition]);
+    this.showQuestion(questionsEasy[this.currentPosition]);
 
   },
 
@@ -213,10 +213,10 @@ let app = {
     qNum.textContent = this.currentPosition + 1;
 
 
-    // NTS: Check if the 'questionsMedium' can be changed with placeholder in
+    // NTS: Check if the 'questionsEasy' can be changed with placeholder in
     // case I want to use a different question array!
 
-    if (this.currentPosition == questionsMedium.length) {
+    if (this.currentPosition == questionsEasy.length) {
       // Hide the game container upon game completion
       gameContainer.classList.add("hide");
       // Show score screen
@@ -267,7 +267,7 @@ let app = {
       result = "Correct!";
     } else {
       // Get the current question
-      let currentQuestion = questionsMedium[this.currentPosition];
+      let currentQuestion = questionsEasy[this.currentPosition];
       // Get the correct answer's index and store as local var
       let currentQuestionCorrectIndex = currentQuestion.correctAnswer;
       // Get the text content of the correct answer and store as local var

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin="anonymous">
   <!-- Title relative to current page -->
-  <title>License to Quiz | Quiz - Easy</title>
+  <title>License to Quiz | Quiz - Agent Difficulty</title>
 </head>
 
 <body>
@@ -31,16 +31,15 @@
     </a>
   </header>
   <div class="background">
-    <!-- Container to hold the quiz questions, buttons and submit button -->
-    <div class="quiz-container">
-      <!-- Hold the questions and a selection of answers for the user to select -->
-      <div id="quiz"></div>
-      <!-- Button for user to submit their answers and receive their score -->
-      <button id="submit">Submit Answers</button>
-      <!-- Display the user's score out of the number of questions upon submission -->
-      <div id="results"></div>
+    <div class="game-container">
+      <div class="counter"><h2>Question <span id="question-number">1</span>/<span id="question-of">5</span></h2></div>
+      <div class="score text-end"></div>
+      <p class="question">Question Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus soluta mollitia laborum illo aliquam at.</p>
+      <span class="label-a">A:</span><button class="btn-a answer-choice">Answer 1</button>
+      <span class="label-b">B:</span><button class="btn-b answer-choice">Answer 2</button>
+      <span class="label-c">C:</span><button class="btn-c answer-choice">Answer 3</button>
+      <p class="user-feedback"></p>
     </div>
-
   </div>
   <!-- Footer includes copyright information for the ip and links to developer's pages. Outgoing links open in a new tab. ARIA labels provided for Font Awesome icons -->
   <footer>
