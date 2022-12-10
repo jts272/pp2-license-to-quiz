@@ -5,7 +5,7 @@
 let qNum = document.querySelector("#question-number");
 let qOf = document.querySelector("#question-of");
 
-let score = document.querySelector("#score");
+let score = document.querySelector(".score");
 
 let question = document.querySelector(".question");
 
@@ -107,6 +107,7 @@ let app = {
         console.log("Check Correct Answer");
         // Call the checkAnswer method and pass in the index of choiceButtons
         this.checkAnswer(index);
+        // bind instances allow methods to be borrowed between objects
       }.bind(this));
     }.bind(this));
     // Call to update the score on game start. It is 'updated' to its initial
@@ -206,7 +207,9 @@ let app = {
   */
 
   updateScore: function() {
-    score.textContent = this.currentScore;
+    // Set score element to the value of the currentScore var
+    score.textContent = `Score: ${this.currentScore}`;
+    // Set the question number element to the array index + 1
     qNum.textContent = this.currentPosition + 1;
     console.log(this.currentPosition);
   }
