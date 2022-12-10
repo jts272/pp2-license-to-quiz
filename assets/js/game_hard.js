@@ -10,55 +10,56 @@ let userFeedback = document.querySelector(".user-feedback");
 
 // Questions Array - Medium Difficulty
 
-let questionsMedium = [{
-    title: "What initials are on the coffin at the beginning of Thunderball?",
-    alternatives: ["A.C", "E.L", "J.B"],
-    correctAnswer: 2
+let questionsHard = [{
+    title: "How does Bond test his magnetic watch in 'Live and Let Die'?",
+    alternatives: ["Unzip a dress", "Attract a pen", "Open car door"],
+    correctAnswer: 0
   },
   {
-    title: "What was the first Bond film NOT based on a book?",
-    alternatives: ["Moonraker", "The Spy Who Loved Me", "You Only Live Twice"],
+    title: "What's the unique feature of Bond's car in 'The Spy Who Loved Me'?",
+    alternatives: ["Cruise Missiles", "Revolving Numberplate", "Caltrops"],
     correctAnswer: 1
   },
   {
-    title: "Who is the villain in 'The Man with the Golden Gun?",
-    alternatives: ["Scaramanga", "Nick Nack", "Baron Samedi"],
+    title: "What is Jaws' only line in the Bond Movies?",
+    alternatives: ["Well, here's to us", "Consider it done", "Huh?"],
     correctAnswer: 0
   },
   {
-    title: "How did James Bond's parents die?",
-    alternatives: ["Car crash", "Armed robbery shooting", "Climbing accident"],
+    title: "How old was Roger Moore in his last Bond role?",
+    alternatives: ["54", "56", "57"],
     correctAnswer: 2
   },
   {
-    title: "What type of car does Bond drive in Moonraker?",
-    alternatives: ["Lotus", "Aston Martin", "None"],
+    title: "What does Stromberg in 'The Spy Who Loved Me' not like to do?",
+    alternatives: ["Drink", "Play Poker", "Shake Hands"],
     correctAnswer: 2
   },
   {
-    title: "What alias does Bond use in 'SPECTRE'?",
-    alternatives: ["Charles Darwin", "Mickey Mouse", "Felix Leiter"],
+    title: "What is Q's second name?",
+    alternatives: ["Boothroyd", "Quigley", "Henderson"],
+    correctAnswer: 0
+  },
+  {
+    title: "What souvenir does Bond bring Moneypenny in 'The World is not \
+    enough'?",
+    alternatives: ["Chocolate", "Cigar", "Bottle of Scotch"],
     correctAnswer: 1
   },
   {
-    title: "What was the initial title for 'License to Kill'?",
-    alternatives: ["License to Thrill", "License to Spy", "License Revoked"],
+    title: "In 'For Your Eyes Only', Q goes undercover as a:",
+    alternatives: ["Milkman", "Tourist", "Priest"],
     correctAnswer: 2
   },
   {
-    title: "Which of these titles was NOT produced by Eon Productions?",
-    alternatives: ["Never Say Never Again", "Thunderball", "Live and Let Die"],
-    correctAnswer: 0
+    title: "What is the name of Milton Krest's boat in 'License to Kill'?",
+    alternatives: ["Stugots", "WaveCrest", "The Albatross"],
+    correctAnswer: 1
   },
   {
-    title: "For which film did Sean Connery return?",
-    alternatives: ["Diamonds are Forever", "Goldfinger", "Octopussy"],
+    title: "Which actor played the role of Sheriff J.W Pepper?",
+    alternatives: ["Clifton James", "Earl Jolly Brown", "David Hedison"],
     correctAnswer: 0
-  },
-  {
-    title: "Which children's song featured in the opening of 'Dr. No'?",
-    alternatives: ["Baa Baa Black Sheep", "Jack and Jill", "Three Blind Mice"],
-    correctAnswer: 2
   }
 ];
 
@@ -81,7 +82,7 @@ let app = {
     this.currentScore = 0;
     // Dynamically display the number of questions for quiz difficulty
 
-    qOf.textContent = questionsMedium.length;
+    qOf.textContent = questionsHard.length;
 
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
@@ -95,11 +96,11 @@ let app = {
     // value of 0 inside this startGame method
     this.updateScore();
     // 'this' refers to the 'app' object. See below that showQuestion is now a
-    // method of the app object. The questionsMedium is given the index of 0,
+    // method of the app object. The questionsHard is given the index of 0,
     // which it gets from the var at the top of this method. Its value is
     // increased when the increasePosition method is called from inside the
     // checkAnswer method
-    this.showQuestion(questionsMedium[this.currentPosition]);
+    this.showQuestion(questionsHard[this.currentPosition]);
 
   },
 
@@ -131,7 +132,7 @@ let app = {
   checkAnswer: function (userSelected) {
     // Create local var for the current question, which comes from the
     // startGame method that gets incremented.
-    let currentQuestion = questionsMedium[this.currentPosition];
+    let currentQuestion = questionsHard[this.currentPosition];
     // This checks to see if the value of the correctAnswer in the question
     // array matches the value of the index of the user selected button
     if (currentQuestion.correctAnswer == userSelected) {
@@ -153,7 +154,7 @@ let app = {
     // Then, show the next question, after the above call increases position.
     // This is simply copied from the startGame function, which the method
     // directly above increments by 1
-    this.showQuestion(questionsMedium[this.currentPosition]);
+    this.showQuestion(questionsHard[this.currentPosition]);
 
   },
 
@@ -167,7 +168,7 @@ let app = {
     this.currentPosition++;
     // This simply displays the array number plus one to make sense to the user
     qNum.textContent = this.currentPosition + 1;
-    if (this.currentPosition == questionsMedium.length) {
+    if (this.currentPosition == questionsHard.length) {
       // Hide the game container upon game completion
       gameContainer.classList.add("hide");
       // Show score screen
@@ -215,7 +216,7 @@ let app = {
       result = "Correct!";
     } else {
       // Get the current question
-      let currentQuestion = questionsMedium[this.currentPosition];
+      let currentQuestion = questionsHard[this.currentPosition];
       // Get the correct answer's index and store as local var
       let currentQuestionCorrectIndex = currentQuestion.correctAnswer;
       // Get the text content of the correct answer and store as local var
