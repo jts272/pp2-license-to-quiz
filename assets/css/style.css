@@ -212,16 +212,6 @@ span {
   color: white;
 }
 
-.feedback {
-  color: var(--gold);
-  font-size: 1.5rem;
-}
-
-#fifty-fifty:hover {
-  background-color: var(--red);
-  color: white;
-}
-
 /* Game Grid Areas */
 
 .counter {
@@ -245,10 +235,6 @@ span {
   grid-area: btn-a;
 }
 
-.fdbk-a {
-  grid-area: fdbk-a;
-}
-
 .label-b {
   grid-area: label-b;
 }
@@ -257,36 +243,12 @@ span {
   grid-area: btn-b;
 }
 
-.fdbk-b {
-  grid-area: fdbk-b;
-}
-
-.fdbk-a {
-  grid-area: fdbk-a;
-}
-
 .label-c {
   grid-area: label-c;
 }
 
 .btn-c {
   grid-area: btn-c;
-}
-
-.fdbk-c {
-  grid-area: fdbk-c;
-}
-
-.fifty-counter {
-  grid-area: fifty-counter;
-}
-
-.fifty-btn {
-  grid-area: fifty-btn;
-}
-
-.next {
-  grid-area: next;
 }
 
 .user-feedback {
@@ -333,7 +295,7 @@ div.socials * {
   text-decoration: none;
 }
 
-/* Quiz Container */
+/* Quiz Container
 
 .quiz-container {
   border: 0.7rem solid var(--gold);
@@ -341,11 +303,11 @@ div.socials * {
   background-color: white;
   display: flex;
   flex-flow: column;
-  /* min-height: 80vh; */
+  min-height: 80vh;
   max-width: 80vw;
-}
+} */
 
-/* Quiz guide stuff */
+/* Quiz guide stuff
 
 #quiz {
   display: flex;
@@ -378,4 +340,4 @@ div.socials * {
 
 #quiz > div.question {
   padding: 0.5rem 0;
-}
+} */
