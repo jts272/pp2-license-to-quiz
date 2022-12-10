@@ -257,9 +257,13 @@ let app = {
   showScoreScreen: function() {
     // Create var for score screen div
     let scoreScreen = `
-      <div>
+      <div class="score-screen text-center">
         <h2>Mission Over!</h2>
         <p>Your final score was ${this.currentScore}!</p>
+        <a href="game_select.html" class="button link-default-reset">
+          Mission Select
+        </a>
+        <a href="index.html" class="button link-default-reset">Home</a>
       
       </div>
     `

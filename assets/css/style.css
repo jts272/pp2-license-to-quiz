@@ -341,3 +341,17 @@ div.socials * {
 #quiz > div.question {
   padding: 0.5rem 0;
 } */
+
+/* Score Screen */
+
+.score-screen {
+  background-color: white;
+  border: 0.7rem solid var(--gold);
+  border-radius: 25px 0 25px 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 60vh;
+  min-width: 80%;
+  padding: 1rem;
+}
