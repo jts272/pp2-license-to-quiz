@@ -182,7 +182,7 @@ dialog::backdrop {
     "label-a btn-a btn-a btn-a btn-a fdbk-a"
     "label-b btn-b btn-b btn-b btn-b fdbk-b"
     "label-c btn-c btn-c btn-c btn-c fdbk-c"
-    ". fifty-counter fifty-btn fifty-btn next next";
+    "user-fdbk user-fdbk user-fdbk user-fdbk user-fdbk user-fdbk";
   grid-template-columns: repeat(6, 1fr);
   max-width: 80%;
   padding: 1rem;
@@ -229,7 +229,7 @@ span {
 }
 
 .score {
-  font-size: 0.9rem;
+  font-weight: bold;
   grid-area: score;
 }
 
@@ -287,6 +287,11 @@ span {
 
 .next {
   grid-area: next;
+}
+
+.user-feedback {
+  font-family: Georgia, serif !important;
+  grid-area: user-fdbk;
 }
 
 /* High Scores Page */
