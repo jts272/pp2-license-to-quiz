@@ -1,19 +1,14 @@
-/* jshint esversion: 6 */
-
-// Get elements
+// Get Elements
 
 let gameContainer = document.querySelector(".game-container");
-
 let qNum = document.querySelector("#question-number");
 let qOf = document.querySelector("#question-of");
-
 let score = document.querySelector(".score");
-
 let question = document.querySelector(".question");
-
 let choiceButtons = document.querySelectorAll(".answer-choice");
-
 let userFeedback = document.querySelector(".user-feedback");
+
+// Questions Array - Medium Difficulty
 
 let questionsMedium = [{
     title: "What initials are on the coffin at the beginning of Thunderball?",
@@ -68,14 +63,6 @@ let questionsMedium = [{
 ];
 
 // Guide: https://gamedevacademy.org/javascript-quiz-tutorial/
-
-// This single question is an object. Its index 1 is an array of choices for the
-// user.
-let singleQuestion = {
-  title: "Who was the second actor to portray James Bond in a feature film?",
-  alternatives: ["Roger Moore", "Timothy Dalton", "George Lazenby"],
-  correctAnswer: 2
-};
 
 // Create Object for game logic, where the functions become methods of the
 // object.
@@ -179,11 +166,6 @@ let app = {
     this.currentPosition++;
     // This simply displays the array number plus one to make sense to the user
     qNum.textContent = this.currentPosition + 1;
-
-
-    // NTS: Check if the 'questionsMedium' can be changed with placeholder in
-    // case I want to use a different question array!
-
     if (this.currentPosition == questionsMedium.length) {
       // Hide the game container upon game completion
       gameContainer.classList.add("hide");
@@ -238,9 +220,9 @@ let app = {
       // Get the text content of the correct answer and store as local var
       let currentQuestionCorrectText =
         currentQuestion.alternatives[currentQuestionCorrectIndex];
-        // Assign text with template string to the user feedback p element
-        result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
-      
+      // Assign text with template string to the user feedback p element
+      result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
+
     }
     // Assign the text content of the result element to the value based on the
     // if statement
@@ -248,7 +230,7 @@ let app = {
 
   },
 
-  showScoreScreen: function() {
+  showScoreScreen: function () {
     // Create var for score screen div
     let scoreScreen = `
       <div class="score-screen text-center">

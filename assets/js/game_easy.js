@@ -1,19 +1,14 @@
-/* jshint esversion: 6 */
-
-// Get elements
+// Get Elements
 
 let gameContainer = document.querySelector(".game-container");
-
 let qNum = document.querySelector("#question-number");
 let qOf = document.querySelector("#question-of");
-
 let score = document.querySelector(".score");
-
 let question = document.querySelector(".question");
-
 let choiceButtons = document.querySelectorAll(".answer-choice");
-
 let userFeedback = document.querySelector(".user-feedback");
+
+// Questions Array - Easy Difficulty
 
 let questionsEasy = [{
     title: "The James Bond movies are based on the novels by which British \
@@ -44,67 +39,7 @@ let questionsEasy = [{
   }
 ];
 
-let questionsMedium = [{
-    title: "What initials are on the coffin at the beginning of Thunderball?",
-    alternatives: ["A.C", "E.L", "J.B"],
-    correctAnswer: 2
-  },
-  {
-    title: "What was the first Bond film NOT based on a book?",
-    alternatives: ["Moonraker", "The Spy Who Loved Me", "You Only Live Twice"],
-    correctAnswer: 1
-  },
-  {
-    title: "Who is the villain in 'The Man with the Golden Gun?",
-    alternatives: ["Scaramanga", "Nick Nack", "Baron Samedi"],
-    correctAnswer: 0
-  },
-  {
-    title: "How did James Bond's parents die?",
-    alternatives: ["Car crash", "Armed robbery shooting", "Climbing accident"],
-    correctAnswer: 2
-  },
-  {
-    title: "What type of car does Bond drive in Moonraker?",
-    alternatives: ["Lotus", "Aston Martin", "None"],
-    correctAnswer: 2
-  },
-  {
-    title: "What alias does Bond use in 'SPECTRE'?",
-    alternatives: ["Charles Darwin", "Mickey Mouse", "Felix Leiter"],
-    correctAnswer: 1
-  },
-  {
-    title: "What was the initial title for 'License to Kill'?",
-    alternatives: ["License to Thrill", "License to Spy", "License Revoked"],
-    correctAnswer: 2
-  },
-  {
-    title: "Which of these titles was NOT produced by Eon Productions?",
-    alternatives: ["Never Say Never Again", "Thunderball", "Live and Let Die"],
-    correctAnswer: 0
-  },
-  {
-    title: "For which film did Sean Connery return?",
-    alternatives: ["Diamonds are Forever", "Goldfinger", "Octopussy"],
-    correctAnswer: 0
-  },
-  {
-    title: "Which children's song featured in the opening of 'Dr. No'?",
-    alternatives: ["Baa Baa Black Sheep", "Jack and Jill", "Three Blind Mice"],
-    correctAnswer: 2
-  }
-];
-
 // Guide: https://gamedevacademy.org/javascript-quiz-tutorial/
-
-// This single question is an object. Its index 1 is an array of choices for the
-// user.
-let singleQuestion = {
-  title: "Who was the second actor to portray James Bond in a feature film?",
-  alternatives: ["Roger Moore", "Timothy Dalton", "George Lazenby"],
-  correctAnswer: 2
-};
 
 // Create Object for game logic, where the functions become methods of the
 // object.
@@ -208,11 +143,6 @@ let app = {
     this.currentPosition++;
     // This simply displays the array number plus one to make sense to the user
     qNum.textContent = this.currentPosition + 1;
-
-
-    // NTS: Check if the 'questionsEasy' can be changed with placeholder in
-    // case I want to use a different question array!
-
     if (this.currentPosition == questionsEasy.length) {
       // Hide the game container upon game completion
       gameContainer.classList.add("hide");
@@ -267,9 +197,9 @@ let app = {
       // Get the text content of the correct answer and store as local var
       let currentQuestionCorrectText =
         currentQuestion.alternatives[currentQuestionCorrectIndex];
-        // Assign text with template string to the user feedback p element
-        result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
-      
+      // Assign text with template string to the user feedback p element
+      result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
+
     }
     // Assign the text content of the result element to the value based on the
     // if statement
@@ -277,7 +207,7 @@ let app = {
 
   },
 
-  showScoreScreen: function() {
+  showScoreScreen: function () {
     // Create var for score screen div
     let scoreScreen = `
       <div class="score-screen text-center">
