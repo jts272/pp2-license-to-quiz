@@ -87,8 +87,8 @@ header img {
   display: flex;
   align-items: center;
   flex-flow: column;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
   min-height: 90vh;
   padding: 2rem 0;
 }
@@ -99,8 +99,9 @@ header img {
   border-radius: 25px 0 25px 0;
   display: flex;
   flex-flow: column;
-  max-width: 80%;
-  max-height: 80%;
+  justify-content: space-around;
+  max-width: 80vw;
+  min-width: 80vw;
   padding: 1.5rem;
   row-gap: 1.5rem;
 }
@@ -117,10 +118,10 @@ header img {
   text-align: center;
 }
 
-.button:hover {
+/* .button:hover {
   background-color: var(--gold);
   color: white;
-}
+} */
 
 /* How To Play Modal Dialog */
 
@@ -184,7 +185,9 @@ dialog::backdrop {
     "label-c btn-c btn-c btn-c btn-c ."
     "user-fdbk user-fdbk user-fdbk user-fdbk user-fdbk user-fdbk";
   grid-template-columns: repeat(6, 1fr);
-  max-width: 80%;
+  max-width: 80vw;
+  min-height: 70vh;
+  min-width: 80vw;
   padding: 1rem;
 }
 
@@ -203,14 +206,15 @@ span {
   border-radius: 25px;
   color: black;
   cursor: pointer;
+  font-size: 0.9rem;
   padding: 0.5rem;
   text-align: center;
 }
 
-.game-container button:hover {
+/* .game-container button:hover {
   background-color: var(--gold);
   color: white;
-}
+} */
 
 /* Game Grid Areas */
 
@@ -263,7 +267,8 @@ span {
   border-radius: 25px 0 25px 0;
   display: flex;
   flex-flow: column;
-  min-width: 80%;
+  max-width: 80vw;
+  min-width: 80vw;
   padding: 1rem;
 }
 
@@ -273,6 +278,7 @@ span {
 
 .scores-container th {
   text-align: start;
+  padding: 1.1em 0;
 }
 
 /* Footer */
@@ -294,53 +300,6 @@ div.socials * {
   font-size: 2rem;
   text-decoration: none;
 }
-
-/* Quiz Container
-
-.quiz-container {
-  border: 0.7rem solid var(--gold);
-  border-radius: 25px 0 25px 0;
-  background-color: white;
-  display: flex;
-  flex-flow: column;
-  min-height: 80vh;
-  max-width: 80vw;
-} */
-
-/* Quiz guide stuff
-
-#quiz {
-  display: flex;
-  flex-flow: column;
-  font-family: Georgia, serif;
-  padding: 1rem;
-}
-
-#answers {
-  display: flex;
-}
-
-#submit {
-  background-color: #eaeaea;
-  border: 2px solid var(--gold);
-  border-radius: 25px;
-  color: black;
-  cursor: pointer;
-  margin: 2rem;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-#results {
-  display: flex;
-  justify-content: center;
-  font-family: Jost;
-  padding-bottom: 1rem;
-}
-
-#quiz > div.question {
-  padding: 0.5rem 0;
-} */
 
 /* Score Screen */
 
