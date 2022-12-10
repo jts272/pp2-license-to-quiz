@@ -149,7 +149,8 @@ let app = {
     if (currentQuestion.correctAnswer == userSelected) {
       console.log("Correct!");
       this.currentScore += 100;
-      // Call the user feedback method when correct
+      // Call the user feedback method when correct. Note the use of booleans
+      // which relate to the isCorrect argument in the method declaration
       this.showFeedback(true);
     } else {
       console.log("Incorrect!");
@@ -185,7 +186,7 @@ let app = {
     // case I want to use a different question array!
 
     if (this.currentPosition == questionsMedium.length) {
-      alert("Game Over!");
+      alert(`Game Over! You Scored ${this.currentScore} points!`);
       this.currentPosition = 0;
       // Fix the question counter going above the amount of questions
       qNum.textContent = "1";
@@ -214,7 +215,11 @@ let app = {
   /*
   This method will give feedback to the user when they answer a question. The
   result will vary depending on if the answer was correct or not. The method is
-  called with a true or false value in the if statement of checkAnswer.
+  called with a true or false value in the if statement of checkAnswer. If the
+  answer is incorrect, the text content of the correct answer will be shown to
+  the user. This is done by getting the current question, the index of its
+  correct answer, then finally its text content. The current question code is
+  simply reused from the checkAnswer method.
   */
 
 
@@ -226,7 +231,16 @@ let app = {
     if (isCorrect) {
       result = "Correct!"
     } else {
-      result = "Incorrect!"
+      // Get the current question
+      let currentQuestion = questionsMedium[this.currentPosition];
+      // Get the correct answer's index and store as local var
+      let currentQuestionCorrectIndex = currentQuestion.correctAnswer;
+      // Get the text content of the correct answer and store as local var
+      let currentQuestionCorrectText =
+        currentQuestion.alternatives[currentQuestionCorrectIndex];
+        // Assign text with template string to the user feedback p element
+        result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
+      
     }
     // Assign the text content of the result element to the value based on the
     // if statement
