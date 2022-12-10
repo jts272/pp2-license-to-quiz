@@ -10,14 +10,6 @@ let score = document.querySelector(".score");
 let question = document.querySelector(".question");
 
 let choiceButtons = document.querySelectorAll(".answer-choice");
-let choiceButtonsArray = Array.from(choiceButtons);
-// console.log(choiceButtons);
-
-let choiceA = document.querySelector(".btn-a");
-let choiceB = document.querySelector(".btn-b");
-let choiceC = document.querySelector(".btn-c");
-
-let next = document.querySelector(".next");
 
 let questionsMedium = [
   {

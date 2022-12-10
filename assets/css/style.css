@@ -175,13 +175,13 @@ dialog::backdrop {
   border: 0.7rem solid var(--gold);
   border-radius: 25px 0 25px 0;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   grid-template-areas: 
     "counter counter counter score score score"
     "question question question question question question"
-    "label-a btn-a btn-a btn-a btn-a fdbk-a"
-    "label-b btn-b btn-b btn-b btn-b fdbk-b"
-    "label-c btn-c btn-c btn-c btn-c fdbk-c"
+    "label-a btn-a btn-a btn-a btn-a ."
+    "label-b btn-b btn-b btn-b btn-b ."
+    "label-c btn-c btn-c btn-c btn-c ."
     "user-fdbk user-fdbk user-fdbk user-fdbk user-fdbk user-fdbk";
   grid-template-columns: repeat(6, 1fr);
   max-width: 80%;
