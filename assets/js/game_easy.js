@@ -128,7 +128,6 @@ let app = {
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
       element.addEventListener("click", function () {
-        console.log("Check Correct Answer");
         // Call the checkAnswer method and pass in the index of choiceButtons
         this.checkAnswer(index);
         // bind instances allow methods to be borrowed between objects
@@ -178,13 +177,11 @@ let app = {
     // This checks to see if the value of the correctAnswer in the question
     // array matches the value of the index of the user selected button
     if (currentQuestion.correctAnswer == userSelected) {
-      console.log("Correct!");
       this.currentScore += 100;
       // Call the user feedback method when correct. Note the use of booleans
       // which relate to the isCorrect argument in the method declaration
       this.showFeedback(true);
     } else {
-      console.log("Incorrect!");
       // Call the user feedback method when incorrect
       this.showFeedback(false);
     }
@@ -221,8 +218,6 @@ let app = {
       gameContainer.classList.add("hide");
       // Show score screen
       this.showScoreScreen();
-      // Alert the final game score
-      alert(`Game Over! You Scored ${this.currentScore} points!`);
       this.currentPosition = 0;
       // Fix the question counter going above the amount of questions
       qNum.textContent = "1";
@@ -245,7 +240,6 @@ let app = {
     score.textContent = `Score: ${this.currentScore}`;
     // Set the question number element to the array index + 1
     qNum.textContent = this.currentPosition + 1;
-    console.log(this.currentPosition);
   },
 
   /*
