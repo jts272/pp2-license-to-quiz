@@ -266,7 +266,7 @@ let app = {
         <a href="index.html" class="button link-default-reset">Home</a>
       
       </div>
-    `
+    `;
     // Get main background element
     let background = document.querySelector(".background");
     // Inject the above HTML onto the background element
