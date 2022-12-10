@@ -1,0 +1,60 @@
+<!-- Comments provided above relevant code sections. Included information on each element's purpose and function -->
+
+<!-- Beginning of document. Boilerplate created with emmet in VS Code -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Assign description and keywords for SEO -->
+  <meta name="description" content="An interactive online quiz based on the world of James Bond 007">
+  <meta name="keywords" content="james, bond, 007, quiz, test, trivia, knowlege, game, lore, secret, agent, mi6">
+  <!-- Link Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Link and provide relative path for Favicon to ensure proper operation -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Preconnect Google Fonts and Font Awesome for SEO -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin="anonymous">
+  <!-- Title relative to current page -->
+  <title>License to Quiz | Quiz - 00 Agent Difficulty</title>
+</head>
+
+<body>
+  <!-- Header includes icon and title which serve as links to homepage. ARIA label included for image icon for accessibility -->
+  <header>
+    <a href="index.html" aria-label="Link to the homepage"><img src="assets/images/logo-007.png" alt="007 logo"></a>
+    <a href="index.html">
+      <h1>License to Quiz</h1>
+    </a>
+  </header>
+  <div class="background">
+    <div class="game-container">
+      <div class="counter"><h2>Question <span id="question-number">1</span>/<span id="question-of">5</span></h2></div>
+      <div class="score text-end"></div>
+      <p class="question">Question Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus soluta mollitia laborum illo aliquam at.</p>
+      <span class="label-a">A:</span><button class="btn-a answer-choice">Answer 1</button>
+      <span class="label-b">B:</span><button class="btn-b answer-choice">Answer 2</button>
+      <span class="label-c">C:</span><button class="btn-c answer-choice">Answer 3</button>
+      <p class="user-feedback"></p>
+    </div>
+  </div>
+  <!-- Footer includes copyright information for the ip and links to developer's pages. Outgoing links open in a new tab. ARIA labels provided for Font Awesome icons -->
+  <footer>
+    <sub> 007, James Bond and related logos are trademarks of Danjaq, LLC. All rights reserved. This application is
+      presented for educational purposes only.</sub>
+    <div class="socials"><a href="https://github.com/jts272/pp2-license-to-quiz" target="_blank"
+        aria-label="Link to this website's GitHub repository (new tab)"><i class="fa-brands fa-github"></i></a> <a
+        href="https://www.linkedin.com/in/joseph-smith-64a889247/" target="_blank"
+        aria-label="Link to the developer's LinkedIn page (new tab)"><i class="fa-brands fa-linkedin"></i></a></div>
+  </footer>
+  <!-- Link to script required to display Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/2c19ba1d16.js" crossorigin="anonymous"></script>
+  <!-- Links to JavaScript file for site interactivity. Last child of body for optimal performance -->
+  <script src="assets/js/game_hard.js"></script>
+</body>
+
+</html>
+<!-- End of document -->
