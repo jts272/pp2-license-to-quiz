@@ -283,21 +283,80 @@ Let's examine how these goals have been acheived:
 
 ### Validation Testing
 
+Validation of code was tested throughout development and after deployment. Instructions are provided on how to self-test each factor below:
+
 #### HTML (W3C)
+
+No warnings found!
+
+[Insert page URL into the 'Address:' field](https://validator.w3.org/#validate_by_uri+with_options)
 
 #### CSS (W3C)
 
+No warnings found!
+
+[Insert page URL into the 'Address:' field](https://jigsaw.w3.org/css-validator/#validate_by_uri)
+
 #### JavaScript (JSHint)
+
+No warnings found!
+
+Insert these two lines of code at the top of [JSHint Validator](https://jshint.com/):
+
+```
+/* jshint esversion:6 */
+/* jshint multistr:true */
+```
+
+Then paste in the source code of the `.js` files, one at a time, from the project's `assets` folder.
 
 #### Accessibility (WAVE)
 
+No Errors found!
+
+[Insert page URL into the 'Web page address:' field](https://wave.webaim.org/)
+
+Alternatively, I like to instantly check with browser extensions:
+
+- [Chrome Extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
+- [Firefox Add-on](https://addons.mozilla.org/en-GB/firefox/addon/wave-accessibility-tool/)
+
+
 #### Mobile-Friendly
 
-### Lighthouse Reports
+[Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
 
-#### Mobile
+![Mobile Friendly](validation/mobile-friendly-pp2.png)
 
-#### Desktop
+#### Lighthouse Reports
+
+Recommended testing environment:
+
+Google Chrome (Incognito window)
+- Open DevTools (F12)
+- Select 'Lighthouse' from top tab that contains 'Elements', 'Console' etc.
+- Select the 'Mobile' Device radio button
+- Click 'Analyze page load'
+
+<details>
+<summary>Home Page</summary>
+<img src="validation/lh-index.png">
+</details>
+
+<details>
+<summary>Difficulty Select</summary>
+<img src="validation/lh-game-select.png">
+</details>
+
+<details>
+<summary>In-Game</summary>
+<img src="validation/lh-game.png">
+</details>
+
+<details>
+<summary>Scores Page</summary>
+<img src="validation/lh-scores.png">
+</details>
 
 ## Version Control & Code Maintainability
 
