@@ -316,32 +316,32 @@ div.socials * {
   /* Bond Backgrounds */
 
   .background-dc {
-    background: var(--grey) url("../images/background-dc.jpg") no-repeat bottom right;
+    background: var(--grey) url("../images/backgrounds/background-dc.jpg") no-repeat bottom right;
     background-size: contain;
   }
 
   .background-gl {
-    background: var(--grey) url("../images/background-gl.jpg") no-repeat right;
+    background: var(--grey) url("../images/backgrounds/background-gl.jpg") no-repeat right;
     background-size: cover;
   }
 
   .background-pb {
-    background: var(--grey) url("../images/background-pb.jpg") no-repeat center;
+    background: var(--grey) url("../images/backgrounds/background-pb.jpg") no-repeat center;
     background-size: cover;
   }
 
   .background-rm {
-    background: var(--grey) url("../images/background-rm.jpg") no-repeat top right;
+    background: var(--grey) url("../images/backgrounds/background-rm.jpg") no-repeat top right;
     background-size: cover;
   }
 
   .background-sc {
-    background: var(--grey) url("../images/background-sc.jpg") no-repeat bottom right;
+    background: var(--grey) url("../images/backgrounds/background-sc.jpg") no-repeat bottom right;
     background-size: contain;
   }
 
   .background-td {
-    background: var(--grey) url("../images/background-td.jpg") no-repeat top right;
+    background: var(--grey) url("../images/backgrounds/background-td.jpg") no-repeat top right;
     background-size: cover;
   }
 
