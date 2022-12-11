@@ -79,6 +79,22 @@ Much like the official website, I opted for a minimalist, understated use of col
 
 ![Colour palette](palette-pp2.png)
 
+### Imagery
+
+The Bond franchise has iconic visual motifs. I included the 'gun barrel' and '007' icons, which were available from sites such as [PNGEgg](https://www.pngegg.com/) or [PNGWing](https://www.pngwing.com/)
+
+The 007 logo was used in the title, and the gun barrel served as the favicon.
+
+<details>
+<summary>007 Logo</summary>
+<img src="../assets/images/logo-007.png">
+</details>
+
+<details>
+<summary>Gun Barrel</summary>
+<img src="../assets/images/barrel-silhouette.png">
+</details>
+
 ### Wireframes
 
 My process for page layout design is to firstly sketch on paper the layout and content. From there, I recreate these drafts in [Balasmiq.](https://balsamiq.com/)
@@ -118,6 +134,10 @@ Due to the iterative nature of this project, some elements on the wireframe plan
 </details>
 
 ### Quiz Questions
+
+As a source of Bond trivia questions and answers, I used [this post with 80+ questions for fans,](https://thoughtcatalog.com/january-nelson/2021/10/james-bond-trivia/) as well as [this Bond guide](https://www.goodreads.com/book/show/1836708.Essential_Bond_The) from my personal collection.
+
+I selected questions which I found relevant to their difficulty and added in dummy choices for the quiz selections.
 
 ## Features
 
