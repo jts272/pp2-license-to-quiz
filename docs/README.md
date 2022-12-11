@@ -360,9 +360,45 @@ Google Chrome (Incognito window)
 
 ## Version Control & Code Maintainability
 
-(about conventional commits, BEM etc.)
+Commits were made to GitHub frequently throughout development. I built upon my commit habits by following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) and [Angular](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTINGmd#-commit-message-guidelines) guidelines.
+
+Each commit is prefixed with a short `<type>` of commit, followed by the body. Additionally, some commits include another optional text body, to provide further insight on the nature of the commit.
+
+[View project commit history](https://github.com/jts272/pp2-license-to-quiz/commits/main)
+
+The project logic was heavily iterated as the project and my knowledge base grew. I have provided transparent commits for any instance where code a dropped.
+
+I made sure to consult the [Google JavaScript Style Guide.](https://google.github.io/styleguide/jsguide.html) Key takeaways include:
+- 80 column character count (line rulers can be configured in VS Code)
+- whitespace, trailing commas, indentation rules etc.
+- Commenting practice
+
+Comments were also included in the HTML markup in this project to delineate the element's function. The stylesheet was organized by section. More global rules were at the top, whilst media queries were last.
+
+Script tags to relevant JavaScript files were placed as the last child of the body tags. Each page follows a consistent flow that is human-scannable.
+
+The overall goal is to create code that is robust, yet semantically logical to human readers too. I commented heavily on the script side. My code needs to be understandable now and also in the future. Furthermore, it eases potential future collaboration.
 
 ## Deployment, Cloning & Forking
+
+GitHub Pages was used as the deployment platform. Here are the steps to deploy:
+
+- Select 'Settings' at the top of the repository
+- Select 'Pages' from the left tab
+- Select 'main' Branch and '/root' folder then select 'Save'
+- After a few minutes the site will be live and a link will be provided
+
+How to Clone:
+
+- Select the green 'Code' dropdown button
+- Copy the HTTPS link to the clipboard
+- Type `git clone` followed by the copied link in your repository terminal
+- The project files will download to your working directory
+
+How to Fork:
+
+- Log in/Sign up to GitHub
+- Select 'Fork' from the top right corner
 
 ## Bugs
 
