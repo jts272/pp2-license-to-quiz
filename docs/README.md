@@ -375,7 +375,7 @@ I made sure to consult the [Google JavaScript Style Guide.](https://google.githu
 
 Comments were also included in the HTML markup in this project to delineate the element's function. The stylesheet was organized by section. More global rules were at the top, whilst media queries were last.
 
-Script tags to relevant JavaScript files were placed as the last child of the body tags. Each page follows a consistent flow that is human-scannable.
+Script tags to relevant JavaScript files were placed as the last child of the body tags. Each page follows a consistent flow that is human-scannable. Project files are systematically named and folders were created for bigger collections of images.
 
 The overall goal is to create code that is robust, yet semantically logical to human readers too. I commented heavily on the script side. My code needs to be understandable now and also in the future. Furthermore, it eases potential future collaboration.
 
@@ -470,8 +470,42 @@ Solution: Restrict hover pseudo class rules to desktop media queries
 
 ## Devices & Technologies Used
 
-## Credits & Resources
+Project coded in GitPod (VS Code)
 
-## Learning Opportunities
+Desktop Browsers:
+- Google Chrome
+- Mozilla Firefox Developer Edition
+- Microsoft Edge
+
+Mobile Browsers:
+- Safari
+- DuckDuckGo
+- Chrome
+
+Hardware
+- Lenovo 14" Laptop @ 1920x1080
+- Dell Monitor @ 1280x1024
+- Apple iPhone 6s
+- Samsung A71
+
+## Additional Credits & Resources
+
+- [HTML, CSS & Javascript in easy steps](https://www.goodreads.com/book/show/55053389-html-css-and-javascript-in-easy-steps?ref=nav_sb_ss_1_27) by Mike McGrath
+- [JavaScript Absolute Beginner's Guide](https://www.goodreads.com/book/show/27888024-javascript-absolute-beginner-s-guide) by Kirupa Chinnathambi (also inspired the offset rounded container design)
+- [Zenva Academy 'JavaScript Mini-Projects – Language Learning Game'](https://academy.zenva.com/product/javascript-mini-projects-language-learning-game/) which I completed alongside this project's development
+- [Wes Bos Blog](https://wesbos.com/javascript)
+- [Bovine Hero](https://github.com/bovinehero) for some early suggestions
+- [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) which formed the codebase of the project
+- [W3Schools](https://www.w3schools.com/)
+
+## Future Design Ideas
+
+- Implement username and score tracking function for dynamic leaderboards
+- Add delay between showing answer and moving to next question - or only proceed on user action
+- Game feature to disable one wrong answer on easy difficulty to create a '50/50' situation. Usage would be limited and reduce score
 
 ## Closing Words
+
+This project allowed me to build on my existing skillset with declarative languages, whilst getting to grips with programming. The front-end delivers on its intent and the scripting creates an engaging user experience. Accessibility and UX were considered at every stage of design.
+
+Ultimately, this was a big learning opportunity. I intend to gain more command of the language through practical experience. This will improve the interactivity my applications will have moving forward.
