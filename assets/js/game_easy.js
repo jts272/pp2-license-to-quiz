@@ -123,6 +123,7 @@ let app = {
     // After checking the answer, refresh the current score by calling the
     // appropriate method
     this.updateScore();
+
     // After checking the answer, increase the value of currentPosition from the
     // startGame method, by calling the increasePosition method from below
     this.increasePosition();
@@ -216,8 +217,8 @@ let app = {
         <a href="game_select.html" class="button link-default-reset">
           Mission Select
         </a>
+        <a href="scores.html" class="button link-default-reset">High Scores</a>
         <a href="index.html" class="button link-default-reset">Home</a>
-      
       </div>
     `;
     // Get main background element

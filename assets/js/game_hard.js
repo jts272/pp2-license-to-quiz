@@ -241,8 +241,8 @@ let app = {
         <a href="game_select.html" class="button link-default-reset">
           Mission Select
         </a>
-        <a href="index.html" class="button link-default-reset">Home</a>
-      
+        <a href="scores.html" class="button link-default-reset">High Scores</a>
+        <a href="index.html" class="button link-default-reset">Home</a>      
       </div>
     `;
     // Get main background element
