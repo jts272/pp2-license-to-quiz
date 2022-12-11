@@ -67,11 +67,55 @@ On the surface plane of design, the practical elements combine to project an ima
 
 User instruction is delivered in a manner that the user (or 'Agent'!) might expect from the character of 'Q' in a briefing session. Messaging is concise, yet functional and addresses the user as if they were in-character as a secret agent embarking on a mission.
 
+## Practical Elements
+
 ### Typography
+
+[007.com](https://www.007.com/) was used as a springboard for the visual appearance of this app. Upon inspection, I found that heading elements used 'Futura' font and body text used 'Georgia'. The latter was a common web-safe font. I was unable to find Futura on Google Fonts, however [this blog post](https://www.naomi-maria.com/5-free-alternatives-for-futura-on-google-fonts/) let to me importing the 'Jost' font for an almost identical match.
 
 ### Colour
 
+Much like the official website, I opted for a minimalist, understated use of colour. The expected black and white of the iconic tuxedo was highlighted with gold - another colour famously associated with Bond. A neutral grey was used as the body background. The hex value for gold was used directly on the website. The grey shade came from the colour picker in MS Paint for the Daniel Craig background image.
+
+![Colour palette](palette-pp2.png)
+
 ### Wireframes
+
+My process for page layout design is to firstly sketch on paper the layout and content. From there, I recreate these drafts in [Balasmiq.](https://balsamiq.com/)
+
+These designs serve as a guide for the general appearance of the page. By using a mobile-first design strategy, these layouts were naturally scaleable to desktop view. The Bond background images were added to the desktop UX to help set the mood and add visual interest.
+
+Due to the iterative nature of this project, some elements on the wireframe plans my not be represented in the deployed product.
+
+<details>
+<summary>Home Page</summary>
+<img src="wireframes/mob-homepage.png">
+</details>
+
+<details>
+<summary>Difficulty Select</summary>
+<img src="wireframes/mob-game-select.png">
+</details>
+
+<details>
+<summary>High Scores Page</summary>
+<img src="wireframes/mob-scoreboard.png">
+</details>
+
+<details>
+<summary>Game in-progress</summary>
+<img src="wireframes/mob-game-in-progress.png">
+</details>
+
+<details>
+<summary>Game end</summary>
+<img src="wireframes/mob-game-end.png">
+</details>
+
+<details>
+<summary>Game screen (detailed)</summary>
+<img src="wireframes/mob-game-screen-detailed.png">
+</details>
 
 ### Quiz Questions
 
