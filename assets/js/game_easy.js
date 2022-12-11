@@ -36,7 +36,7 @@ let questionsEasy = [{
     title: "What was the first James Bond movie?",
     alternatives: ["Goldfinger", "Casino Royale", "Dr. No"],
     correctAnswer: 2
-  }
+  },
 ];
 
 // Guide: https://gamedevacademy.org/javascript-quiz-tutorial/
@@ -57,9 +57,7 @@ let app = {
     // Create var to store the current score, initialized to 0
     this.currentScore = 0;
     // Dynamically display the number of questions for quiz difficulty
-
     qOf.textContent = questionsEasy.length;
-
     // Add event listeners to the choice buttons
     choiceButtons.forEach(function (element, index) {
       element.addEventListener("click", function () {
@@ -77,7 +75,6 @@ let app = {
     // increased when the increasePosition method is called from inside the
     // checkAnswer method
     this.showQuestion(questionsEasy[this.currentPosition]);
-
   },
 
   /*
@@ -93,7 +90,6 @@ let app = {
     choiceButtons.forEach(function (element, index) {
       element.textContent = q.alternatives[index];
     });
-
   },
 
   /*
@@ -123,7 +119,6 @@ let app = {
     // After checking the answer, refresh the current score by calling the
     // appropriate method
     this.updateScore();
-
     // After checking the answer, increase the value of currentPosition from the
     // startGame method, by calling the increasePosition method from below
     this.increasePosition();
@@ -131,7 +126,6 @@ let app = {
     // This is simply copied from the startGame function, which the method
     // directly above increments by 1
     this.showQuestion(questionsEasy[this.currentPosition]);
-
   },
 
   /*
@@ -156,8 +150,6 @@ let app = {
       score.textContent = "0";
       this.currentScore = 0;
     }
-
-
   },
 
   /*
@@ -165,7 +157,6 @@ let app = {
   declared globally at the top of the script and is used here to modify its text
   content.
   */
-
   updateScore: function () {
     // Set score element to the value of the currentScore var
     score.textContent = `Score: ${this.currentScore}`;
@@ -182,7 +173,6 @@ let app = {
   correct answer, then finally its text content. The current question code is
   simply reused from the checkAnswer method.
   */
-
   showFeedback: function (isCorrect) {
     // Create empty string for the user feedback result p element
     let result = "";
@@ -200,12 +190,10 @@ let app = {
         currentQuestion.alternatives[currentQuestionCorrectIndex];
       // Assign text with template string to the user feedback p element
       result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
-
     }
     // Assign the text content of the result element to the value based on the
     // if statement
     userFeedback.textContent = result;
-
   },
 
   showScoreScreen: function () {
@@ -225,8 +213,7 @@ let app = {
     let background = document.querySelector(".background");
     // Inject the above HTML onto the background element
     background.innerHTML = scoreScreen;
-
-  }
+  },
 };
 
 // Start game function is now a method of the app object and is called as shown
