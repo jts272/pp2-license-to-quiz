@@ -219,11 +219,67 @@ In the event of error, the user is given safe passage back to 'HQ' (or the homep
 
 ## Development & Testing
 
-(include description of dev process and some background to testing)
+This app was developed as my first foray into programming languages; namley with JavaScript. Multiple guides were consulted to make this app possible. Here are three that I used at certain points:
+
+[Guide 1](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) - Very slick and in keeping with the project needs. However, as I progressed, I found the code and syntax hard to follow. I did not feel this was helping me to progress my thinking.
+
+[Guide 2](https://simplestepscode.com/javascript-quiz-tutorial/) - I had the idea to make a quiz with radio buttons, thinking it would be easier to verify input. I used this guide for a time, but ultimately found it to be inflexible and it did not meet the MVP standard of the project.
+
+[Guide 3](https://academy.zenva.com/product/javascript-mini-projects-language-learning-game/) - This was the basis of the project. I took the time to improve my understanding and usage of the programming language. Code from the other guides was backed up locally and is not present in the deployed project.
+
+Building on this skills learned in my [previous and first project,](https://github.com/jts272/pp1-happy-bees-cafe) I was confident to leverage and build upon my HTML and CSS skills. This was a solid foundation for me to create a slick, responsive front-end as the scripting was being implemented.
+
+Testing was a key part of the process. A detailed breakdown of testing follows below:
 
 ### User Stories Testing
 
+Let's examine how these goals have been acheived:
+
+- Client Goals:
+  - To provide entertainment for franchise fans
+    - Fully fucntional quiz app based on historical franchise lore
+  - To project a visual impression in-keeping with fan expectations
+    - Design cues take from official online presence
+  - For users to engage with the IP
+    - Users can engage with the lore to improve their score. If questions are unfamilliar, they might want to watch the corresponding movie
+
+- First Time Visitor Goals:
+  - To find site navigation evident
+    - Navigation options shown prominently and immediately
+  - To have a great first impression of site presentation
+    - Slick use of colour and key art set the tone
+  - To play their first quiz game
+    - Play rules are readily provided, along with a choice of difficulties
+
+- Returning Visitor Goals:
+  - To play the quiz game at a harder level
+    - Harder difficulties are provided for invested fans
+  - To view target scores, which they would aim to beat
+    - Links to the score board are prominent, to motivate the user for a better score
+
 ### Functionality Testing
+
+- All pages:
+  - Internal links go to relevant page: :heavy_check_mark:
+  - External links open in external tabs: :heavy_check_mark:
+  - Mouse hover states function as intended: :heavy_check_mark:
+  - Transparencies are displayed correctly on desktop: :heavy_check_mark:
+
+- Modal:
+  - Displays correctly and can be closed with `Esc` key: :heavy_check_mark:
+
+- Difficulty Select:
+  - Each link starts its corresponding game: :heavy_check_mark:
+
+- In-Game:
+  - User's input is validated with feedback: :heavy_check_mark:
+  - Next question loads after user input: :heavy_check_mark:
+  - Question counter increments properly: :heavy_check_mark:
+  - Score counter increments/decrements properly: :heavy_check_mark:
+
+- Game-End:
+  - Correct final score is shown: :heavy_check_mark:
+  - Navigational links function correctly: :heavy_check_mark:
 
 ### Validation Testing
 
