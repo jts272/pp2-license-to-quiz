@@ -400,9 +400,73 @@ How to Fork:
 - Log in/Sign up to GitHub
 - Select 'Fork' from the top right corner
 
-## Bugs
+## Bugs Encountered
 
-(collect as you go to go here)
+Look out for commits prefixed with `fix:` in commit history!
+
+- Modal sitting top-right instead of screen center:
+
+![Modal bug](bugs/bug-modal-top-left.png)
+
+- Solution: Fix incorrect use of box-model control. Changed selector from `body` to `*`
+
+- Score divs spanning across the page and cutting off:
+
+![Scores bug](bugs/bug-scores-flow.png)
+
+- Solution: Set the `flex-flow:` to `column;`
+
+- Grid area names not displaying as intended:
+
+![Grid bug](bugs/bug-grid.png)
+
+- Solution: Remove stray `<span>` tag
+
+- Check Answer not registering as a function:
+
+![Bind bug](bugs/bug-object-context.png)
+
+- Solution: The guide I was following encased all functional logic within an oject, which made the functions 'methods' of the `app` object. In an instance where `.forEach()` was used, context of `.this` was lost. This was solved in the guide by use of the `.bind(this)` on the closing brackets of the nested functions within `startGame()`. An alternative solution would have been to use an arrow function `() =>` where this is not an issue
+
+- Question and Score counters flowing over maximum amount:
+
+![Counter bug](bugs/bug-counters.png)
+
+- Solution: Set the current position and score text content on game end:
+
+```
+// Fix the question counter going above the amount of questions
+      qNum.textContent = "1";
+      // Fix the score not resetting on automatic game restart
+      score.textContent = "0";
+      this.currentScore = 0;
+```
+
+- Show user feedback function not using variables to display correct answer text:
+
+![Variables bug](bugs/bug-feedback-correct-text.png)
+
+- Solution: Declare vars with `let` keyword inside the block they are used, before they are referenced:
+
+```
+} else {
+      // Get the current question
+      let currentQuestion = questionsEasy[this.currentPosition];
+      // Get the correct answer's index and store as local var
+      let currentQuestionCorrectIndex = currentQuestion.correctAnswer;
+      // Get the text content of the correct answer and store as local var
+      let currentQuestionCorrectText =
+        currentQuestion.alternatives[currentQuestionCorrectIndex];
+      // Assign text with template string to the user feedback p element
+      result = `Incorrect! The answer was: '${currentQuestionCorrectText}'`;
+    }
+```
+
+- Hover state sticking to buttons on mobile after DOM refresh:
+
+![Hover bug](bugs/bug-mobile-hover.png)
+
+Solution: Restrict hover pseudo class rules to desktop media queries
 
 ## Devices & Technologies Used
 
