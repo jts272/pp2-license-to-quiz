@@ -4,6 +4,8 @@
 
 [Click here to view the live Project Page](https://jts272.github.io/pp2-license-to-quiz/index.html) (Right/Middle click to open in a new tab)
 
+Select the list icon on the top left of the screen near `README.md` at any time to access the table of contents
+
 ---
 
 Need I remind you, 007, that you have a license to quiz?
@@ -15,8 +17,6 @@ The technologies used to power this quiz consist of HTML5, CSS3 and pure JavaScr
 ---
 
 ## User Experience
-
-(what the user experience is intended to be. include different perspectives, user stories)
 
 This application is designed for fans of the James Bond 007 franchise. It tests the user's knowledge to varying degrees of difficulty.
 
