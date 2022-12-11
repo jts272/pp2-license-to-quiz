@@ -313,13 +313,54 @@ div.socials * {
 /* Media Queries */
 
 @media screen and (min-width: 1024px) {
-  .background {
-    background-color: red;
+
+  /* Transparency Effects for Bond Backgrounds */
+
+  .transparency {
+    opacity: 0.95;
+  }
+
+  /* Bond Backgrounds */
+  
+  .background-dc{
+    background: var(--grey) url("../images/background-dc.jpg")
+    no-repeat bottom right;
+    background-size: contain;
+  }
+
+  .background-gl{
+    background: var(--grey) url("../images/background-gl.jpg")
+    no-repeat right;
+    background-size: cover;
+  }
+
+  .background-pb {
+    background: var(--grey) url("../images/background-pb.jpg")
+    no-repeat center;
+    background-size: cover;
+  }
+
+  .background-rm {
+    background: var(--grey) url("../images/background-rm.jpg")
+    no-repeat right;
+    background-size: cover;
+  }
+
+  .background-sc {
+    background: var(--grey) url("../images/background-sc.jpg")
+    no-repeat bottom right;
+    background-size: contain;
+  }
+
+  .background-td {
+    background: var(--grey) url("../images/background-td.jpg")
+    no-repeat center;
+    background-size: cover;
   }
 
   /* Pseudo Elements */
   .button:hover {
-    background-color: var(--gold);
+    background-color: var(--gold) ;
     color: white;
   }
 }
