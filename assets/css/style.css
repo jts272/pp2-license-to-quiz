@@ -363,4 +363,13 @@ div.socials * {
     background-color: var(--gold) ;
     color: white;
   }
+
+  /* Footer */
+  footer {
+    justify-content: space-between;
+  }
+
+  footer a:hover {
+    color: var(--gold);
+  }
 }
