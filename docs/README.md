@@ -99,7 +99,7 @@ The 007 logo was used in the title, and the gun barrel served as the favicon.
 
 My process for page layout design is to firstly sketch on paper the layout and content. From there, I recreate these drafts in [Balasmiq.](https://balsamiq.com/)
 
-These designs serve as a guide for the general appearance of the page. By using a mobile-first design strategy, these layouts were naturally scaleable to desktop view. The Bond background images were added to the desktop UX to help set the mood and add visual interest.
+These designs serve as a guide for the general appearance of the page. By using a mobile-first design strategy, these layouts were naturally scalable to desktop view. The Bond background images were added to the desktop UX to help set the mood and add visual interest.
 
 Due to the iterative nature of this project, some elements on the wireframe plans my not be represented in the deployed product.
 
@@ -147,7 +147,7 @@ We will look at the features in detail. Screenshots are provided from the deskto
 
 ![Home Page](screenshots/ss-desk-home.png)
 
-The user lands here. Instantly, they get a sense of what the app is about through the use of colour and imagery. Concise and separated body text informs the of the app's function. Large buttons are labelled and invite site nagivation. The large white header banner holds the iconic logo and stylized text which show the site's intent. It also functions as a link to the homepage, as expected.
+The user lands here. Instantly, they get a sense of what the app is about through the use of colour and imagery. Concise and separated body text informs the of the app's function. Large buttons are labelled and invite site navigation. The large white header banner holds the iconic logo and stylized text which show the site's intent. It also functions as a link to the homepage, as expected.
 
 A hover state was included for desktop users to provide navigational feedback when they mouse over buttons.
 
@@ -219,7 +219,7 @@ In the event of error, the user is given safe passage back to 'HQ' (or the homep
 
 ## Development & Testing
 
-This app was developed as my first foray into programming languages; namley with JavaScript. Multiple guides were consulted to make this app possible. Here are three that I used at certain points:
+This app was developed as my first foray into programming languages; namely with JavaScript. Multiple guides were consulted to make this app possible. Here are three that I used at certain points:
 
 [Guide 1](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) - Very slick and in keeping with the project needs. However, as I progressed, I found the code and syntax hard to follow. I did not feel this was helping me to progress my thinking.
 
@@ -233,15 +233,15 @@ Testing was a key part of the process. A detailed breakdown of testing follows b
 
 ### User Stories Testing
 
-Let's examine how these goals have been acheived:
+Let's examine how these goals have been achieved:
 
 - Client Goals:
   - To provide entertainment for franchise fans
-    - Fully fucntional quiz app based on historical franchise lore
+    - Fully functional quiz app based on historical franchise lore
   - To project a visual impression in-keeping with fan expectations
     - Design cues take from official online presence
   - For users to engage with the IP
-    - Users can engage with the lore to improve their score. If questions are unfamilliar, they might want to watch the corresponding movie
+    - Users can engage with the lore to improve their score. If questions are unfamiliar, they might want to watch the corresponding movie
 
 - First Time Visitor Goals:
   - To find site navigation evident
@@ -404,13 +404,13 @@ How to Fork:
 
 Look out for commits prefixed with `fix:` in commit history!
 
-- Modal sitting top-right instead of screen center:
+- Modal sitting top-right instead of screen centre:
 
 ![Modal bug](bugs/bug-modal-top-left.png)
 
 - Solution: Fix incorrect use of box-model control. Changed selector from `body` to `*`
 
-- Score divs spanning across the page and cutting off:
+- Score `divs` spanning across the page and cutting off:
 
 ![Scores bug](bugs/bug-scores-flow.png)
 
@@ -426,7 +426,7 @@ Look out for commits prefixed with `fix:` in commit history!
 
 ![Bind bug](bugs/bug-object-context.png)
 
-- Solution: The guide I was following encased all functional logic within an oject, which made the functions 'methods' of the `app` object. In an instance where `.forEach()` was used, context of `.this` was lost. This was solved in the guide by use of the `.bind(this)` on the closing brackets of the nested functions within `startGame()`. An alternative solution would have been to use an arrow function `() =>` where this is not an issue
+- Solution: The guide I was following encased all functional logic within an object, which made the functions 'methods' of the `app` object. In an instance where `.forEach()` was used, context of `.this` was lost. This was solved in the guide by use of the `.bind(this)` on the closing brackets of the nested functions within `startGame()`. An alternative solution would have been to use an arrow function `() =>` where this is not an issue
 
 - Question and Score counters flowing over maximum amount:
 
@@ -446,7 +446,7 @@ Look out for commits prefixed with `fix:` in commit history!
 
 ![Variables bug](bugs/bug-feedback-correct-text.png)
 
-- Solution: Declare vars with `let` keyword inside the block they are used, before they are referenced:
+- Solution: Declare variables with `let` keyword inside the block they are used, before they are referenced:
 
 ```
 } else {
