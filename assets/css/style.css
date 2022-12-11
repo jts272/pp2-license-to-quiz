@@ -378,7 +378,7 @@ div.socials * {
   }
 
   /* Pseudo Elements */
-  button hover,
+  button:hover,
   .button:hover {
     background-color: var(--gold);
     color: white;
