@@ -204,11 +204,6 @@ span {
   text-align: center;
 }
 
-.game-container button:hover {
-  background-color: var(--gold);
-  color: white;
-}
-
 /* Game Grid Areas */
 
 .counter {
