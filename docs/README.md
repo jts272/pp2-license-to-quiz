@@ -141,17 +141,81 @@ I selected questions which I found relevant to their difficulty and added in dum
 
 ## Features
 
-(include what MVP has to consist of - homepage, quiz, scores. use of modals. difficulty select)
+We will look at the features in detail. Screenshots are provided from the desktop experience to illustrate each part.
 
-### Homepage
+### Home Page
 
-### Game Page
+![Home Page](screenshots/ss-desk-home.png)
+
+The user lands here. Instantly, they get a sense of what the app is about through the use of colour and imagery. Concise and separated body text informs the of the app's function. Large buttons are labelled and invite site nagivation. The large white header banner holds the iconic logo and stylized text which show the site's intent. It also functions as a link to the homepage, as expected.
+
+A hover state was included for desktop users to provide navigational feedback when they mouse over buttons.
+
+![Hover State](screenshots/ss-desk-hover.png)
+
+### Footer
+
+![Footer](screenshots/ss-desk-footer.png)
+
+The footer in black contrasts nicely with the header. It's content is succinct; containing copyright information and links to the developer's socials. Both the header and footer are consistent across pages.
+
+### How to Play Modal
+
+![How to Play Modal](screenshots/ss-desk-modal.png)
+
+This is expected to be the user's first action. It outlines the game flow and how to navigate the site. It uses the modern html `<dialog>` feature in conjunction with JavaScript. This is great for keyboard and screen reader users out-of-the box and can be easily closed with the `Esc` key. [Compatibility was checked](https://caniuse.com/?search=dialog) before implementation.
+
+### Game Select Page
+
+![Game Select Page](screenshots/ss-desk-game-select.png)
+
+Here, the user choses their quiz difficulty. An exact description of the difficulty details is provided below the selection. This screen will look familiar to fans of the popular N64 title [GoldenEye 007.](https://en.wikipedia.org/wiki/GoldenEye_007_(1997_video_game))
+
+### Game in Progress
+
+![Game in Progress](screenshots/ss-desk-game-start.png)
+
+This is where the user does the majority of their interaction. This was styled with CSS grid to provide a consistent layout. It consists of:
+
+- Question counter: Dynamically updates the progress of the quiz
+- Score: Dynamically updates as questions are answered
+- Current Question: The player must answer this
+- Answer Selections: The player choses their answer
+- Feedback: Responds to correct or incorrect answers:
+
+<details>
+<summary>Correct</summary>
+<img src="screenshots/ss-desk-game-correct.png">
+</details>
+
+<details>
+<summary>Incorrect</summary>
+<img src="screenshots/ss-desk-game-incorrect.png">
+</details>
+
+### Game End
+
+![Game End](screenshots/ss-desk-game-end.png)
+
+The user is informed of their final score and offered navigational buttons to the relevant sections.
 
 ### Scores Page
 
+![Scores Page](screenshots/ss-desk-scores.png)
+
+Scores of 'past agents' are shown here. This is provided as a reference for the user, giving them targets to beat.
+
 ### 404 Page
 
+![404](screenshots/ss-desk-404.png)
+
+In the event of error, the user is given safe passage back to 'HQ' (or the homepage!).
+
 ### Favicon
+
+![Favicon](../assets/images/favicon.ico)
+
+[favicon.io](https://favicon.io/) was used to convert the gun barrel logo to favicon format. This signifies the current tab to the user. Black on white was used instead of transparency to ensure visibility for dark-themed users.
 
 ## Development & Testing
 
