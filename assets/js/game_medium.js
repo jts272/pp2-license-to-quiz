@@ -63,6 +63,8 @@ let questionsMedium = [{
 ];
 
 // Guide: https://gamedevacademy.org/javascript-quiz-tutorial/
+// Full course guide: https://academy.zenva.com/product/
+// javascript-mini-projects-language-learning-game/
 
 // Create Object for game logic, where the functions become methods of the
 // object.
