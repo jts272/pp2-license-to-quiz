@@ -317,7 +317,7 @@ div.socials * {
   /* Transparency Effects for Bond Backgrounds */
 
   .transparency {
-    opacity: 0.95;
+    opacity: 0.85;
   }
 
   /* Bond Backgrounds */
@@ -342,7 +342,7 @@ div.socials * {
 
   .background-rm {
     background: var(--grey) url("../images/background-rm.jpg")
-    no-repeat right;
+    no-repeat top right;
     background-size: cover;
   }
 
@@ -354,8 +354,40 @@ div.socials * {
 
   .background-td {
     background: var(--grey) url("../images/background-td.jpg")
-    no-repeat center;
+    no-repeat top right;
     background-size: cover;
+  }
+
+  /* Content containers */
+
+  .difficulty-container,
+  .game-container,
+  .home-container,
+  .scores-container,
+  .score-screen {
+    min-width: 40vw;
+    max-width: 40vw;
+  }
+
+  .game-container {
+    padding: 3rem;
+  }
+
+  .game-container button {
+    font-size: 1rem;
+  }
+
+  /* Modal */
+
+  .howto-modal {
+    font-size: 1rem;
+    min-width: 50vw;
+    max-width: 50vw;
+  }
+
+  .howto-modal h2,
+  .howto-modal p {
+    padding: 1.2rem;
   }
 
   /* Pseudo Elements */

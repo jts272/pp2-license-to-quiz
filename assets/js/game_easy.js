@@ -210,7 +210,7 @@ let app = {
   showScoreScreen: function () {
     // Create var for score screen div
     let scoreScreen = `
-      <div class="score-screen text-center">
+      <div class="score-screen text-center transparency">
         <h2>Mission Over!</h2>
         <p>Your final score was ${this.currentScore}!</p>
         <a href="game_select.html" class="button link-default-reset">
